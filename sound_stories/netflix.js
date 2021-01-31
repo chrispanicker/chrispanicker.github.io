@@ -2,7 +2,7 @@
 var linkArray = ["https://www.netflix.com/watch/70117312?t=1767"//scott pilgrim, 
 	"https://www.netflix.com/watch/80223779?trackId=14170286&t=5446"//marriage story,
 	"https://www.netflix.com/watch/81122572?trackId=13752289&t"//middleditch & schwartz,
-	""]; 
+	"https://www.netflix.com/watch/80205227?trackId=14170286&t1600"//lady bird <3]; 
 
 var i = 0;
 var timer=0;
@@ -12,13 +12,10 @@ function setup (){
 }
 
 function draw(){
-	//a timer for one sec, final will have unique --
-	//times for each clip. yep. I did this to myself lol...
- 	if (millis() >= 1000+timer) {
-    i = i + 1;
-    timer = millis(); 
-    background(0);
-	}
+	//timer for each shot based on variable linkTime
+ 	if(i==0){
+
+ 	}
 	//array index reset
 	if (i==3) {
  		i = 0;
