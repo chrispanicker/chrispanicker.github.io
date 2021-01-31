@@ -1,8 +1,8 @@
 //
-var linkArray = ["https://www.netflix.com/watch/70117312?t=1767", 
-	"https://www.netflix.com/watch/80223779?trackId=14170286&t=5446",
-	"https://www.netflix.com/watch/81122572?trackId=13752289&t",
-	]; 
+var linkArray = ["https://www.netflix.com/watch/70117312?t=1767"//scott pilgrim, 
+	"https://www.netflix.com/watch/80223779?trackId=14170286&t=5446"//marriage story,
+	"https://www.netflix.com/watch/81122572?trackId=13752289&t"//middleditch & schwartz,
+	""]; 
 
 var i = 0;
 var timer=0;
