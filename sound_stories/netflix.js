@@ -31,4 +31,5 @@ function draw(){
 function nextButton(){
 	window.open(linkArray[i], "_blank", 
 		"toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+	setTimeout(function () { win.close();}, 3000);
 }
