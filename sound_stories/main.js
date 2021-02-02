@@ -1,5 +1,5 @@
-function youtube(){
-	window.location="./youtube.html"
+function soundcloud(){
+	window.location="./soundcloud.html"
 }
 
 function netflix(){

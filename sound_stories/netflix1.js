@@ -2,7 +2,7 @@
 var linkArray = ["https://www.netflix.com/watch/80205227?trackId=14170286&t=1780", //lady bird <3 1 min 5 sec 
 	"https://www.netflix.com/watch/70117312?t=1291", //scott pilgrim 1:30
 	"https://www.netflix.com/watch/81120982?trackId=13752289&t=3119",//i lost my body 1:30
-	"https://www.netflix.com/watch/80223779?trackId=14170056&t=10"]; // marriage story 560 sec
+	"https://www.netflix.com/watch/80223779?trackId=14170056&t=460"]; // marriage story 
 
 var timeArray = [9000,9000,9000,9000]
 var timmy;
@@ -20,13 +20,13 @@ function nextButton(){
 		t=61000;}
 
 	if(i==1){
-		t=150000;}
+		t=105000;}
 
 	if(i==2){
-		t=150000;}
+		t=105000;}
 
 	if(i==3){
-		t=560000;}
+		t=104000;}
 
 	if (i==4){
  		i = 0;
