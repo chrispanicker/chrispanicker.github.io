@@ -1,3 +1,15 @@
+a{
+	font-weight: lighter;
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+}
+
+.home{
+	padding-top: : 200;
+	padding-left: 200;
+}
+
 body{
 	margin: 0;
 	padding: 0;
@@ -5,11 +17,33 @@ body{
 	color:white;
 	font-family: sans-serif;
 }
+
+h1{
+	font-weight: lighter;
+}
 div{
 	display: flex;
-
+	flex-direction: column;
+	min-height: 100vh;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	flex-shrink: 1;
+}
 
+button {
+  background-color: #FFFFFF;
+  border: none;
+  color: #000000;
+  text-align: center;
+  padding: 20px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+button:hover {background-color: #494949}
+
+button:active {
+  background-color: #2B2B2B;
 }
