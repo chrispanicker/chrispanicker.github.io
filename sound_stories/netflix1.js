@@ -30,13 +30,18 @@ function nextButton(){
 
 	if (i==4){
  		i = 0;
+ 		clearInterval(imbadatthis);
 	}
 
 	var win=window.open(linkArray[i], "_blank", "toolbar=no,scrollbars=no,resizable=no,top=500,left=500,width=1280,height=720");
 
-	setTimeout(function () { win.close();}, t);
+	setTimeout(function () { 
+		win.close();
+		console.log(i);
+	nextButton();
+	}, t);
 
 	i=i+1
 
-	//https://stackoverflow.com/questions/14132122/open-url-in-new-window-with-javascript
+	// inspired by: https://stackoverflow.com/questions/14132122/open-url-in-new-window-with-javascript
 }
