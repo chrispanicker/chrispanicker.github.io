@@ -1,12 +1,85 @@
 @font-face {
-  font-family: 'IBMPlexSansKR-Bold';
+  font-family: 'IBMPlexSans-Bold';
   font-style: normal;
   font-weight: 700;
-  url:"./font/IBMPlexSansKR-Bold.woff2";
+  src: url("./font/IBMPlexSans-Bold.woff2");
 }
 
+@font-face {
+  font-family: 'IBMPlexSans-Text';
+  font-style: normal;
+  font-weight: 700;
+  src: url("./font/IBMPlexSans-Text.woff2");
+}
 body{
 	background-color: #30384B;
-	font-family: "IBMPlexSansKR-Bold";
-	color: white;
+}
+
+h1{
+	text-align: center;
+	font-family: "IBMPlexSans-Bold";
+	color: #c4c4c4;
+	font-size: 10vw;
+}
+
+*{
+	text-align: center;
+	font-family: "IBMPlexSans-Text";
+	color: #c4c4c4;
+	font-size: 3vw;
+}
+
+div{	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+ 	width: 5vw;
+ 	padding: .5vw;
+}
+
+a{
+	border:none;
+	padding-left: 3vw;
+	padding-right: 3vw;
+	margin: 4px;
+	border-radius: 1vw;
+	font-size: 4vw;
+}
+
+
+.blue{
+	background-color: #64A1B4;
+	color: #64A1B4;
+}
+.red{
+	background-color: #CF5F5F;
+	color: #CF5F5F;
+}
+.orange{
+	background-color: #CEA16C;
+	color: #CEA16C;
+}
+.green{
+	background-color: #95B464;
+	color: #95B464;
+}
+.yellow{
+	background-color: #CEC46C;
+	color: #CEC46C;
+}
+
+.purple{
+	background-color: #746CCE;
+	color: #746CCE;
+}
+
+.pink{
+	background-color: #9F64B4;
+	color: #9F64B4;
+}
+
+.cream{
+	background-color: #C5BAA1;
+	color: #C5BAA1;
 }
