@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'IBMPlexSansKR-Bold';
+  font-style: normal;
+  font-weight: 700;
+  url:"./font/IBMPlexSansKR-Bold.woff2";
+}
+
+body{
+	background-color: #30384B;
+	font-family: "IBMPlexSansKR-Bold";
+	color: white;
+}
