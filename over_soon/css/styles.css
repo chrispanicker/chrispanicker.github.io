@@ -1,0 +1,199 @@
+@font-face {
+	font-family: 'BaskervilleBook-Medium';
+	font-style: normal;
+	src: url("../fonts/BaskervilleBook-Medium.woff2");
+}
+
+@font-face {
+	font-family: 'BaskervilleOldface';
+	font-style: normal;
+	src: url("../fonts/BASKVILL.woff2");
+}
+
+
+body{
+	background-color: black;
+}
+
+div{
+	color: white;
+	font-family: "BaskervilleOldface";
+	height: 100vh;
+
+
+  	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+p{
+	margin: 20px;
+	opacity: 0;
+	position: relative;
+}
+
+/*animations*/
+@keyframes clarity{
+	0%{
+		opacity: 0%;
+		bottom: 50vh;
+	}
+	50%{
+		opacity: 70%;
+		bottom: 30vh;
+	}
+	100%{
+		opacity: 0%;
+		bottom: 50vh;
+	}
+}
+@keyframes lyricOne{
+	0%{
+		top: 10px;
+		opacity: 0%;
+	}
+	90%{
+		top: 50px;
+		opacity: 100%;
+	}
+	100%{
+		top: 10px;
+		opacity: 0%;
+	}
+}
+
+@keyframes lyricTwo{
+	0%{
+		left: 1em;
+
+	}
+
+	50%{
+		left: 1.1em;
+	}
+
+	100%{
+		left: 1em;
+	}
+}
+
+.l1 p {
+  animation: lyricOne 5s ease;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+.l1 p:nth-child(10n){
+	animation-delay: -1s
+}
+.l1 p:nth-child(10n+1){
+	animation-delay: -12.6s
+}
+.l1 p:nth-child(10n+2){
+	animation-delay:-33.2s
+}
+.l1 p:nth-child(10n+3){
+	animation-delay: -2s
+}
+.l1 p:nth-child(10n+4){
+	animation-delay: -12.2s
+}
+.l1 p:nth-child(10n+5){
+	animation-delay: -1.3s
+}
+.l1 p:nth-child(10n+6){
+	animation-delay: -5.6s
+}
+.l1 p:nth-child(10n+7){
+	animation-delay: 0s
+}
+.l1 p:nth-child(10n+8){
+	animation-delay: -4.2s
+}
+.l1 p:nth-child(10n+9){
+	animation-delay: -21.2s
+}
+
+
+
+.l2 p{
+	left: 10vw;
+	animation: lyricTwo .01s ease, clarity 5s ease;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+}
+
+.l2 p:nth-child(10n){
+	animation-delay: -2s
+}
+.l2 p:nth-child(10n+1){
+	animation-delay: -15.2s
+}
+.l2 p:nth-child(10n+2){
+	animation-delay:-10.5s
+}
+.l2 p:nth-child(10n+3){
+	animation-delay: -20.7s
+}
+.l2 p:nth-child(10n+4){
+	animation-delay: -12.2s
+}
+.l2 p:nth-child(10n+5){
+	animation-delay: -1.3s
+}
+.l2 p:nth-child(10n+6){
+	animation-delay: -5.6s
+}
+.l2 p:nth-child(10n+7){
+	animation-delay: 0s
+}
+.l2 p:nth-child(10n+8){
+	animation-delay: -4.2s
+}
+.l2 p:nth-child(10n+9){
+	animation-delay: -26.2s
+}
+
+.l3 p{
+	animation: lyricTwo .2s ease, clarity 20s ease;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+}
+
+.l3 p:nth-child(10n){
+	animation-delay: -2s
+}
+.l3 p:nth-child(10n+1){
+	animation-delay: -15.2s
+}
+.l3 p:nth-child(10n+2){
+	animation-delay:-10.5s
+}
+.l3 p:nth-child(10n+3){
+	animation-delay: -20.7s
+}
+.l3 p:nth-child(10n+4){
+	animation-delay: -12.2s
+}
+.l3 p:nth-child(10n+5){
+	animation-delay: -1.3s
+}
+.l3 p:nth-child(10n+6){
+	animation-delay: -5.6s
+}
+.l3 p:nth-child(10n+7){
+	animation-delay: 0s
+}
+.l3 p:nth-child(10n+8){
+	animation-delay: -4.2s
+}
+.l3 p:nth-child(10n+9){
+	animation-delay: -26.2s
+}
+
+.l4 p{
+	animation: clarity 10s ease;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+}
