@@ -9,8 +9,7 @@ h1{
 	font-size: 2em;
 }
 
-
-
+ 
 .main{
 	display:flex;
 	max-width: 70vw;
@@ -18,6 +17,19 @@ h1{
 	position: relative;
 	width: 100%;
 	z-index: 1;
+}
+
+.menu{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 84vh;
+}
+
+.menu a{
+	opacity: 100;
+	padding: 1vw;
+	font-size: 2em;
 }
 
 .textOver{
@@ -38,15 +50,12 @@ a {
 }
 
 a:hover{
-	animation: layers .5s linear;
+	animation: layers 5s linear;
 	animation-iteration-count: infinite;
 }
-.invis{
-	opacity: 0;
-}
 
 
-/* header */
+
 .header{
 	height: 12vh
 }
@@ -66,6 +75,20 @@ a:hover{
 	justify-content: center;
 }
 
+.invis{
+	opacity: 0;
+}
+
+.layers{
+		opacity: 0;
+		background-color: red;
+}
+.layers:hover{
+	animation: hint 5s linear;
+	animation-delay: -2s;
+	animation-iteration-count: infinite;
+}
+
 .num{
 	display: flex;
 	font-size: 5em;
@@ -74,14 +97,13 @@ a:hover{
 	top: -7vh;
 }
 
+
+
 /*animations*/
 @keyframes layers{
-	0%{opacity: 0;
-		left: 10px;}
-	50% {opacity: 100;
-		left: -10px;}
-	100%{opacity: 0;
-		left: 10px;}
+	0%{opacity: 0;}
+	50% {opacity: 100;}
+	100%{opacity: 0;}
 }
 
 @keyframes hint{
