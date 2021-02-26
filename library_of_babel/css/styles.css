@@ -1,142 +1,199 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400&display=swap');
+
+
+
+/*---------------FORMATTING-----------------*/
+@media only screen and (max-width: 700px){
+*{font-size: 50px;}
+h1{font-size: 2em }
+
+}
+
 *{
 	font-family: 'Libre Baskerville', serif;
+	font-size: 16px;
+}
+h1{ 
+	font-size: 3em 
 }
 
-/*a {
+a {
 	color: black;
 	text-decoration: none;
-	opacity: 0;
-}
 
-a:hover{
-	animation: layers 5s linear;
-	animation-iteration-count: infinite;
-}*/
-
-h1{
-	font-family: 'Libre Baskerville', serif;
-	font-weight: 400;
-	font-size: 2em;
-}
-
-span {
-  background-image: linear-gradient(#ffd900, #ffd900);
-  background-repeat: no-repeat;
-  background-position: 0% 100%;
-  background-size: 100% 2px;
-}
-
-span:hover {
-  background-size: 100% 100%;
-  background-position: 0% 0%;
 }
 
 
+
+
+/*----------------HEADER/MENU-----------------*/
 .header{
-	height: 12vh
-}
-
-.hint{
-	text-align: center;
-	position: absolute;
-	animation: hint 20s linear;
-	animation-iteration-count: infinite;
-	z-index: -3;
-	top: 0px;
-}
-
-.home{
-	color: #BFBBBA;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+
+}
+.header a {
+	font-size: 1em;
+}
+.header span::before{
+	content: "1";
+	animation: glitch infinite 2s;
 }
 
-.invis{
-	opacity: 0;
+.menu a{
+	letter-spacing: 0em;
+	transition: background-color .5s, color .5s, letter-spacing .5s;
 }
 
-.layers{
-		opacity: 0;
-		background-color: red;
-}
-.layers:hover{
-	animation: hint 5s linear;
-	animation-delay: -2s;
-	animation-iteration-count: infinite;
+.menu a:hover{
+	background-color:black;
+	color: white;
+	letter-spacing: 3em
 }
 
-.main{
-	display:flex;
-	max-width: 70vw;
-	margin: auto;
-	position: relative;
-	width: 100%;
-	z-index: 1;
-}
 
 .menu{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 84vh;
+	height: 100vh;
 }
 
-.menu a{
-	opacity: 100;
-	padding: 1vw;
-	font-size: 2em;
+/*---------------------TEXTPG.1--------------------*/
+.text{	
+ 	 	display: flex;
+ 	justify-content: center;
+ 	height: 100vh;
+ 	width: 100vw;
+}
+.text p{
+ 	width: 70vw;
+
+}
+.text span{
+	background-color:white;
+	letter-spacing: 0em;
+	transition: background-color .5s, color .5s, letter-spacing .5s;
 }
 
-.num{
-	display: flex;
-	font-size: 5em;
-	justify-content: center;
+.text span:hover{
+	background-color:grey;
+	color: white;
+	letter-spacing: .5em
+}
+
+.text a{
 	position: relative;
-	top: -7vh;
+	animation: shaking infinite .2s;
+	letter-spacing: 0em;
+	transition: background-color .5s, color .5s, letter-spacing .5s;
 }
 
-.textOver{
-	  animation: animated-text 4s steps(29,end) 1s 1 normal both,
-	display:flex;
-	max-width: 70vw;
-	margin: auto;
-	position: absolute;
-	width: 100%;
-	z-index: -1;
-	top: 0px;
+.text a:hover{
+	background-color:black;
+	color: white;
+	letter-spacing: 5em
+}
 
+/*---------------------TEXTPG.2--------------------*/
+
+.text2{	
+ 	 	display: flex;
+ 	justify-content: center;
+ 	height: 100vh;
+ 	width: 100vw;
+}
+.text2 p{
+ 	width: 70vw;
+
+}
+.text2 span{
+	background-color:white;
+	letter-spacing: 0em;
+	transition: background-color .5s, color .5s, letter-spacing .5s;
+}
+
+.text2 span:hover{
+	background-color:grey;
+	color: white;
+	letter-spacing: -.2em
+}
+
+.text2 a{
+	position: relative;
+	animation: shaking infinite .2s;
+	letter-spacing: 0em;
+	transition: background-color .5s, color .5s, letter-spacing .5s;
+}
+
+.text2 a:hover{
+	background-color:black;
+	color: white;
+	letter-spacing: 5em
+}
+
+/*---------------------TEXTPG.3--------------------*/
+.text3{	
+ 	display: flex;
+ 	justify-content: center;
+ 	height: 100vh;
+ 	width: 100vw;
+}
+.beside{
+	width: 10vw;
+	color: white;
+}
+
+.beside span{
+	background-color:white;
+	letter-spacing: -.02em;
+	transition: background-color .5s, color .5s, letter-spacing .5s;
+}
+
+.beside span:hover{
+	background-color:grey;
+	color: white;
+	letter-spacing: 1em
+}
+
+.beside a{
+	position: relative;
+	animation: shaking infinite .2s;
+	letter-spacing: 0em;
+	transition: background-color .5s, color .5s, letter-spacing .5s;
+}
+
+.beside a:hover{
+	background-color:black;
+	color: black;
+	letter-spacing: 5em
 }
 
 
-/*animations*/
-@keyframes layers{
-	0%{opacity: 0;}
-	50% {opacity: 100;}
-	100%{opacity: 0;}
+
+
+
+
+
+
+/*---------------ANIMATION--------------------*/
+@keyframes glitch{
+	0%{content: "4"}
+	1%{content: "1"}
+	10%{content: "1"}
+	11%{content: "3"}
+	20%{content: "3"}
+	21%{content: "4"}
+	45%{content: "2"}
+	46%{content: "5"}
+	99%{content: "6"}
+	100%{content: "3"}
 }
 
-@keyframes hint{
-	0%{
-		top: 10px;
-		opacity: 0%;
-		letter-spacing: 100px;
-	}
-	90%{
-		top: 50px;
-		opacity: 100%;
-		letter-spacing: 0px;
-	}
-	100%{
-		top: 10px;
-		opacity: 0%;
-		letter-spacing: 100px;
-	}
-}
-
-@keyframes redact{
-	0%{opacity: 0;}
-	50% {opacity: 100;}
-	100%{opacity: 0;}
+@keyframes shaking {
+	0%{left: 0vw;}
+	50%{left: .07vw;}
+	100%{left: 0vw;}
 }
 
