@@ -3,16 +3,27 @@
 
 
 /*---------------FORMATTING-----------------*/
-@media only screen and (max-width: 700px){
-*{font-size: 50px;}
-h1{font-size: 2em }
+@media screen and (max-width: 700px) {
+p {
+    font-size: 15px;
+  }
 
+.header a {
+	font-size: .5em;
+	}
+
+.text4 a{
+	color: black;
+	position: relative;
+	animation: shaking infinite .2s;	
+	}
 }
+
 
 *{
 	font-family: 'Libre Baskerville', serif;
-	font-size: 16px;
 }
+
 h1{ 
 	font-size: 3em 
 }
@@ -20,7 +31,6 @@ h1{
 a {
 	color: black;
 	text-decoration: none;
-
 }
 
 
@@ -33,9 +43,7 @@ a {
 	align-items: center;
 
 }
-.header a {
-	font-size: 1em;
-}
+
 .header span::before{
 	content: "1";
 	animation: glitch infinite 2s;
@@ -99,7 +107,7 @@ a {
 /*---------------------TEXTPG.2--------------------*/
 
 .text2{	
- 	 	display: flex;
+ 	display: flex;
  	justify-content: center;
  	height: 100vh;
  	width: 100vw;
@@ -204,9 +212,17 @@ a {
 }
 .text4 a:hover{
 	background-color:black;
-	color: white;
 	letter-spacing: 5em;
 	opacity: 100;
+}
+
+@media screen and (max-width: 700px) {
+
+.text4 a{
+	color: black;
+	position: relative;
+	animation: shaking infinite .2s;	
+	}
 }
 
 /*------------------TEXTPG.5--------------------*/
@@ -240,7 +256,7 @@ a {
 .text5 a{
 	position: relative;
 	animation: shaking infinite .1s;
-	color: white;
+	color: red;
  	transition: background-color .5s, color .5s, letter-spacing .5s;
 }
 
@@ -250,7 +266,7 @@ a {
 	letter-spacing: 2em;
 }
 .text5 a:visited{
-	color: white;
+	color: red;
 	background-color: red;
 	font-size: 5em;
 }
@@ -259,6 +275,14 @@ a {
 	background-color:red;
 	color: white;
 	font-size: 3em;
+}
+
+
+
+@media screen and (max-width: 700px) {
+body{
+	margin: 0;
+	padding: 0;
 }
 
 
