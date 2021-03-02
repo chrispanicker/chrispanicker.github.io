@@ -150,10 +150,11 @@ a {
 }
 .beside{
 	width: 10vw;
-	color: white;
+	color: black;
 }
 
 .beside {
+	animation: fading infinite 10s;
 	background-color:white;
 	letter-spacing: -.02em;
 	transition: background-color .5s, color .5s, letter-spacing .5s;
@@ -161,13 +162,12 @@ a {
 
 .beside:hover{
 	background-color:grey;
-	color: white;
+	color: black;
 	letter-spacing: 1em;
 }
 
 .beside a{
 	position: relative;
-	animation: shaking infinite .2s;
 	letter-spacing: 0em;
 	transition: background-color .5s, color .5s, letter-spacing .5s;
 }
@@ -261,6 +261,7 @@ a {
 }
 
 .text5 a:hover{
+	animation: focus .5s;
 	background-color:black;
 	color: white;
 	letter-spacing: 2em;
@@ -279,11 +280,6 @@ a {
 
 
 
-@media screen and (max-width: 700px) {
-body{
-	margin: 0;
-	padding: 0;
-}
 
 
 
@@ -305,5 +301,16 @@ body{
 	0%{left: 0vw;}
 	50%{left: .07vw;}
 	100%{left: 0vw;}
+}
+
+@keyframes fading{
+	0%{opacity: 0}
+	50%{opacity: 10%}
+	100%{opacity: 0}
+}
+
+@keyframes focus{
+	0%{opacity: 0}
+	100%{opacity: 1}
 }
 
