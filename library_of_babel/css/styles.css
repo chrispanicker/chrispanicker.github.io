@@ -145,16 +145,16 @@ a {
 	color: white;
 }
 
-.beside span{
+.beside {
 	background-color:white;
 	letter-spacing: -.02em;
 	transition: background-color .5s, color .5s, letter-spacing .5s;
 }
 
-.beside span:hover{
+.beside:hover{
 	background-color:grey;
 	color: white;
-	letter-spacing: 1em
+	letter-spacing: 1em;
 }
 
 .beside a{
@@ -171,9 +171,95 @@ a {
 }
 
 
+/*------------------TEXTPG.4--------------------*/
 
+.text4{
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	width: 100vw;
+}
 
+.text4 p{
+ 	width: 70vw;
+ 	line-height: 0px;
+ 	background-color:white;
+	color: black;
+	opacity: 100%;
+ 	transition: line-height .5s, background-color .5s, color .5s, opacity .5s;
+}
+.text4 p:hover{
+	line-height: 2em;
+	background-color:grey;
+	color: white;
+	opacity: 50%;
+}
 
+.text4 a{
+	position: relative;
+	animation: shaking infinite .2s;
+	letter-spacing: 0em;
+	color: white;
+	transition: background-color .5s, color .5s, letter-spacing .5s, opacity .5s;
+}
+.text4 a:hover{
+	background-color:black;
+	color: white;
+	letter-spacing: 5em;
+	opacity: 100;
+}
+
+/*------------------TEXTPG.5--------------------*/
+
+.text5{
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	width: 100vw;
+ 	transition: background-color .5s;
+}
+
+.text5 p{
+ 	width: 70vw;
+ 	background-color:white;
+	color: white;
+	opacity: 100%;
+ 	transition: background-color .5s, color .5s;
+}
+.text5 p:hover{
+	color: white;
+	opacity: 100;
+}
+.text5:hover{
+	background-color: black;
+}
+.text5:hover >p{
+	background-color: black;
+}
+
+.text5 a{
+	position: relative;
+	animation: shaking infinite .1s;
+	color: white;
+ 	transition: background-color .5s, color .5s, letter-spacing .5s;
+}
+
+.text5 a:hover{
+	background-color:black;
+	color: white;
+	letter-spacing: 2em;
+}
+.text5 a:visited{
+	color: white;
+	background-color: red;
+	font-size: 5em;
+}
+
+.text5 a:active{
+	background-color:red;
+	color: white;
+	font-size: 3em;
+}
 
 
 
