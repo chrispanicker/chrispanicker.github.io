@@ -1,0 +1,37 @@
+body{
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  background-color:#002A1E;
+  }
+
+#lightsOn{
+  background-color: #A8CCAD;
+}
+
+#spotlight{
+  border-radius: 100%;
+  background-color: #A8CCAD;
+  height:15vh;
+  position:absolute;
+  transform:translate(-50%,-50%);
+  width: 15vh;
+  z-index: -1;
+}
+
+.switches{
+  display: flex
+}
+
+img{
+  display: flex;
+  width: 15vh;
+}
+
+.hide{
+  display: none;
+}
+
+.drag-over {
+    border: dashed 3px red;
+}
