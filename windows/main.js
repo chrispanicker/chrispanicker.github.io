@@ -1,35 +1,39 @@
-var Airtable = require('airtable');
-var base = new Airtable({apiKey: 'key3wySYYU0tXKf12'}).base('appwWvc8kL4LpURS5');
+const windowArray = [];
+const answerArray = [];
 
-let every_window = document.getElementById('every_window');
+var everywindow = document.getElementById('every_window');
 
-base('Table 1').select({
-   maxRecords: 100,
-   view: "Grid view"
-}).eachPage(function page(records, fetchNextPage) {
-    // This function (`page`) will get called for each page of records.
-    records.forEach(function(record) {
-      if (every_window) {
+//defining choices for question
+function questionOne(){
+ 	let choiceOne = Math.floor(Math.random()*100)
+ 	let choiceTwo = Math.floor(Math.random()*100)
 
-         // define and create elements
-         let el = document.createElement('li');
-         let p = document.createElement('p');
-         let h1 = document.createElement('h1');
-         let img = document.createElement('img');
+//if rng causes two of the same number, do it again
+ 	if (choiceTwo == choiceOne){
+ 		let choiceTwo = Math.floor(Math.random()*100)
+ 	}
+ 	console.log(choiceOne);
+ 	console.log(choiceTwo);
 
-         // Set innerHTML of the elements
-         h1.innerHTML = record.get('Feeling');
-         p.innerHTML = record.get('Shape');
-         img.src = record.fields.Attachments.url;
+	if (every_window) {
+        // define and create elements
+		let parent = document.createElement("div")
+		let btn1 = document.createElement("button")
+		let btn2 = document.createElement("button")
 
-         // append them to the list
-         every_window.append(el);
-         el.append(img, h1, p);
-      }
-    });
+        // Set innerHTML of the elements
+        btn1.innerHTML = choiceOne
+        btn2.innerHTML = choiceTwo
 
-    fetchNextPage();
+        //onclick function
+        btn1.addEventListener("click", pushToArray);
+        btn2.addEventListener("click", pushToArray);        
+        // append them to the parent div
+        document.getElementById('every_window').append(parent);
+		parent.append(btn1, btn2)
+    }
+};
 
-}, function done(err) {
-    if (err) { console.error(err); return; }
-});
+function pushToArray(){
+
+}
