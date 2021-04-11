@@ -1,0 +1,100 @@
+/*font and general formatting*/
+font-family: 'IBM Plex Serif', serif;
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+/*properties of images*/
+img{
+  border-radius: 100vw;
+  clip-path: circle(10vw at center);
+  padding: 5vw;
+  transition: height .5s, width .5s, clip-path 1s;
+  height: 25vw;
+  width: 25vw;
+}
+
+img:hover{
+  clip-path: circle(20vw at center);
+  height: 28vw;
+  width: 28vw;
+}
+
+/*question header*/
+h2{
+  font-family: "IBM Plex Serif";
+  font-style: italic;
+  z-index: 1;
+  position: absolute;
+  top: 10vh;
+}
+
+/*parent*/
+ul {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+}
+
+/*grandparent*/
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+  img{
+   width: 50vw;
+   height: 50vw;
+   clip-path: circle(50vw at center);
+  }
+  
+  img:hover{
+   clip-path: circle(100vw at center);
+   height: 60vw;
+   width: 60vw;
+  }
+
+  ul {
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   flex-direction: column;
+
+   height: 100vh;
+   width: 100vw;
+  }
+
+}
+
+/*animation and image properties DURATION MUST MATCH JS*/
+#imgAnimation{
+  animation: fadeInOut 3s ease infinite;
+  transition: height .5s, width .5s, clip-path 1s;
+  height: 40vw;
+  width: 40vw;
+  clip-path: circle(20vw at center);
+
+}
+#imgAnimation:hover{
+   clip-path: circle(100vw at center);
+   height: 49vw;
+   width: 49vw;
+  }
+@keyframes fadeInOut {
+  0% {opacity: 0%;}
+  50% {opacity: 100%;}
+  100% {opacity: 0%;}
+}

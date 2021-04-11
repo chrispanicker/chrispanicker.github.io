@@ -18,7 +18,7 @@ function questionOne(){
         console.log('duplicate!')
  	} 
 
-	if (every_window) {
+	if (everywindow) {
         // define and create elements
 		let parent = document.createElement("div")
 		let btn1 = document.createElement("button")
