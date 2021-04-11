@@ -1,4 +1,4 @@
-const windowArray = [];
+const fullArray = [];
 const answerArray = [];
 
 var everywindow = document.getElementById('every_window');
@@ -17,9 +17,6 @@ function questionOne(){
         choiceTwo = choiceTwo-1;
         console.log('duplicate!')
  	} 
-
-    console.log(choiceOne);
-    console.log(choiceTwo);
 
 	if (every_window) {
         // define and create elements
