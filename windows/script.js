@@ -42,7 +42,6 @@ function questionOne(){
         let parent1 = document.createElement("div")
         let parent2 = document.createElement("div")
         let img1 = document.createElement("img")
-        let question1 = document.createElement("h2")
         let img2 = document.createElement("img")
 
  
@@ -52,7 +51,6 @@ function questionOne(){
 
         // Set innerHTML of the elements
         img1.innerHTML = choiceOne
-        question1.innerHTML = "question one:"
         img2.innerHTML = choiceTwo
 
         //src of images
@@ -69,7 +67,7 @@ function questionOne(){
 
 
         // append them to the parent div
-        document.getElementById('every_window').append(parent1, question1, parent2,);
+        document.getElementById('every_window').append(parent1, parent2,);
         parent1.append(img1)
         parent2.append(img2)
 

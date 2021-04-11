@@ -8,6 +8,7 @@ body{
 ul {
   font-family: "IBM Plex Serif";
   font-style: italic;
+  font-size: .8vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,13 +20,39 @@ ul {
 
 img{
   border-radius: 100vw;
-  height:20vw;
+  clip-path: circle(10vw at center);
+  height:30vw;
   padding: 5vw;
-  transition: width 250ms, height 250ms;
-  width:20vw;
+  transition: width 250ms, height 250ms, clip-path 1s;
+  width:30vw;
+
 }
 
 img:hover{
-  width: 40vw;
-  height: 40vw;
+  clip-path: circle(100vw at center);
+  height: 35vw;
+  width: 35vw;
+}
+
+@media only screen and (max-width: 800px) {
+  ul {
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   flex-direction: column;
+
+   height: 100vh;
+   width: 100vw;
+  }
+  img{
+   width: 50vw;
+   height: 50vw;
+   clip-path: circle(50vw at center);
+  }
+  
+  img:hover{
+   clip-path: circle(100vw at center);
+   height: 60vw;
+   width: 60vw;
+  }
 }
