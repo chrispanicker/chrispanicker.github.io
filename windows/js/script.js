@@ -218,6 +218,8 @@ function questionTwo(){
 //-------------------------------question type 3 "random image"---------------------------------------
 
 function questionThree(){
+    document.getElementById("question_number").classList.add('questionThree')
+    document.getElementById("question_number").classList.add('questionThree')
     currentType = 3;
     console.log('Question Type 3')
 

@@ -135,36 +135,9 @@ p{
 .gp{
 
 }
-
-@media only screen and (max-width: 800px) {
-
-  img{
-   width: 50vw;
-   height: 50vw;
-   clip-path: circle(50vw at center);
-  }
-  
-  img:hover{
-   clip-path: circle(100vw at center);
-   height: 60vw;
-   width: 60vw;
-  }
-
-  ul {
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
-   flex-direction: column;
-
-   height: 100vh;
-   width: 100vw;
-  }
-
-}
-
 /*animation and image properties DURATION MUST MATCH JS*/
 #imgAnimation{
-    height: 30vw;
+  height: 30vw;
   width: 30vw;
   clip-path: circle(25vh at center);
   animation: fadeInOut 2s ease infinite;
@@ -190,3 +163,56 @@ p{
   0%{opacity: 0;}
   100%{opacity: 100%;}
 }
+
+@media only screen and (max-width: 800px) {
+  #question_number{
+    top: 70vh;
+  }
+
+  #question{
+    top: 72vh;
+  }
+
+  #imgAnimation{
+    height: 60vw;
+    width: 60vw;
+  }
+
+  #imgAnimation:hover{
+   clip-path: circle(27vh at center);
+   height: 60vw;
+   width: 60vw;
+  }
+
+  .parent{
+    font-size: 5vw;
+  }
+  .end{
+    font-size: 10vw;
+  }
+
+  img{
+    animation: fadeIn 6s ease;
+    width: 50vw;
+    height: 50vw;
+    clip-path: circle(50vw at center);
+  }
+  
+  img:hover{
+   clip-path: circle(100vw at center);
+   height: 60vw;
+   width: 60vw;
+  }
+
+  ul {
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+
+   height: 100vh;
+   width: 100vw;
+  }
+}
+/*MOBILE ANIMATIONS*/
+
+
