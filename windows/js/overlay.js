@@ -2,7 +2,7 @@
 let questionArray = ['one', 'two', 'three', 'four', 'five'];
 
 let typeOneText = ['which windows would you prefer to look out from?','which windows do you like?', 
-'which windows tell you a story?', 'which windows did your eye draw to first?', 
+'which windows tell you a story?', 'which windows did your eyes draw to first?', 
 'which windows would not be your first choice?','which windows would you rather break?', ]
 
 let typeOneConc =['you are interested in things that are ', 'you see yourself as ', 
