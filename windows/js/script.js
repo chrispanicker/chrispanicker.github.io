@@ -298,24 +298,22 @@ function questionThree(){
     document.getElementById("question_number").classList.add('questionThree')
     currentType = 3;
     console.log('Question Type 3')
-
     let choiceOne;
     let img1 = document.createElement("img")
-    let imgAmount = 0;
+    let parent1 = document.createElement("div")
 
 //creating a 3 second interval to generate new images
 q3();
 var intervalId = window.setInterval(q3, 2000); //end of interval
 
 function q3(){
-
+    parent1.remove(img1);
     img1.removeEventListener("click", pushToArray1);
     img1.id = "imgAnimation"
     choiceOne = Math.floor(Math.random()*100);
 
     if (every_window) {
         // define and create elements
-        let parent1 = document.createElement("div")
 
         //function that turns value into string
         String(choiceOne);

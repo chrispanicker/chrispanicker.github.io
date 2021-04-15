@@ -220,7 +220,7 @@ p{
   clip-path: circle(25vh at center);
   animation: fadeInOut 2s ease infinite;
   transition: clip-path 2s, height 1s, width 1s,;
-  transition-timing-function: ease;
+  z-index: -1;
 }
 #imgAnimation:hover{
    clip-path: circle(27vh at center);
@@ -270,8 +270,8 @@ p{
     width: 25vw;}
   100%{opacity: 100%;
         clip-path: circle(30vw at center);
-    height: 30vw;
-  width: 30vw;}
+    height: 40vw;
+  width: 40vw;}
 }
 /*---------------------------Media Query-------------------------------------*/
 @media only screen and (max-width: 800px) {
@@ -309,8 +309,8 @@ p{
 
   img{
     animation: fadeInImgMobile 3s ease;
-    width: 30vw;
-    height: 30vw;
+    width: 40vw;
+    height: 40vw;
     clip-path: circle(30vw at center);
   }
   
