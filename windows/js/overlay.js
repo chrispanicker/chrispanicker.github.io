@@ -10,6 +10,9 @@ let typeOneText = [
 'which windows would you rather break?', //6
 'which windows could you see yourself behind?',//7
 'which windows are more repulsive?',//8
+'which windows are louder?',//9
+'which windows are more attractive?',//10
+'which windows are colder?'//11
 ]
 
 let typeOneConc =[
@@ -21,28 +24,36 @@ let typeOneConc =[
 "some say you're chaotic, but really, you're ",//6 
 'you think of yourself as',//7
 'you get mildly annoyed by things that are',//8
+'you are more aware of things that are',//9
+'you are attracted to those who are',//10
+'you avoid those who are',//11
 ]
 
 let typeThreeText = [
-'which windows best represent you in twenty years?', 
-'which windows make you feel sad?', 
-'which windows make you want to reevaluate your place in society?', 
-'which windows remind you of home?', 
-'which windows are you not likely to see today?',
-'which windows talk about you behind your back?', 
-"which windows feel like a place you've been before?",
-'which windows would you stare longingly out of?',
+'which windows best represent you in twenty years?',//1
+'which windows make you feel sad?', //2
+'which windows make you want to reevaluate your place in society?', //3
+'which windows remind you of home?', //4
+'which windows are you not likely to see today?',//5
+'which windows talk about you behind your back?', //6
+"which windows feel like a place you've been before?",//7
+'which windows would you stare longingly out of?',//8
+'which windows are not your cup of tea?',//9
+'which windows tell no lies?',//10
 ]
 
 let typeThreeConc = [
-'you think of the future as ', 
-'you hold on to memories that are ', 
-'you believe life is ', 
-'you find comfort in things that are ', 
-'currently, you feel ', 
-'you are afraid that you are ', 
-'you see the world as ', 
-"you're not lonely, you're",
+'you think of the future as ', //1
+'you hold on to memories that are ',//2 
+'you believe life is ', //3
+'you find comfort in things that are ',//4 
+'currently, you feel ', //5
+'you are afraid that you are ',//6 
+'you see the world as ', //7
+"you're not lonely, you're",//8
+'you are not satisfied by things that are'//9
+'you trust people who are'//10
+
 ]
 
 let typeFourText = [
