@@ -38,8 +38,42 @@ function rngQuestion(){
     title.classList.add('smaller')
     questionNumber(); //See overlay.js
     questionText();
+    dontDoIt();
+}
+//creates a div that blocks you from clicking something while animation is playing
+function dontDoIt(){
+    let pleaseDont = document.createElement('div');
+    pleaseDont.classList.add('pleaseDont')
+    document.getElementById('every_window').append(pleaseDont);
+
+    setTimeout(function(){ 
+        pleaseDont.remove(); 
+    }, 700);
 }
 
+function dontDoItConc(){
+    let pleaseDont = document.createElement('div');
+    pleaseDont.classList.add('pleaseDont')
+    document.getElementById('every_window').append(pleaseDont);
+
+    setTimeout(function(){ 
+        pleaseDont.remove(); 
+    }, 3000);
+}
+
+//loads next page
+function nextP(){
+    setTimeout(function(){
+        document.getElementById('every_window').classList.remove('fadeOut');
+        document.getElementById('question').classList.remove('fadeOut');
+        document.getElementById('question_number').classList.remove('fadeOut');
+        document.getElementById('every_window').innerHTML=''; 
+        resetQuestion();
+        rngQuestion();
+        console.log('yup'); 
+    }, 700);
+       
+    }
 //-------------------------MOBILE-------------------------------------------------------
 /*function showQuestionIcon(x) {
 
@@ -101,10 +135,12 @@ function intro(){
     parent4.append(end);
 
     function start(){
-        document.getElementById('every_window').innerHTML = '';
-        resetQuestion();
-        rngQuestion();
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        nextP();
     }
+
 }
 
 //-------------------------------question type 1 "two choices"---------------------------------------
@@ -156,15 +192,17 @@ function questionOne(){
 
     function pushToArray1(){
         answerArray.push(choiceOne);
-        document.getElementById('every_window').innerHTML = '';
-        resetQuestion();
-        rngQuestion();
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        nextP();
         }
     function pushToArray2(){
         answerArray.push(choiceTwo);
-        document.getElementById('every_window').innerHTML = '';
-        resetQuestion();
-        rngQuestion();
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        nextP();
         }
     }
 };
@@ -231,22 +269,25 @@ function questionTwo(){
 
     function pushToArray1(){
         answerArray.push(choiceOne);
-        document.getElementById('every_window').innerHTML = '';
-        resetQuestion();
-        rngQuestion();
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        nextP();
         }
     function pushToArray2(){
         answerArray.push(choiceTwo);
-        document.getElementById('every_window').innerHTML = '';
-        resetQuestion();
-        rngQuestion();
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        nextP();
         }
     function pushToArray3(){
         answerArray.push(choiceThree);
-        document.getElementById('every_window').innerHTML = '';
-        resetQuestion();
-        rngQuestion();
-        }
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        nextP();
+                }
     }
 };
 
@@ -263,7 +304,10 @@ function questionThree(){
     let imgAmount = 0;
 
 //creating a 3 second interval to generate new images
-var intervalId = window.setInterval(function(){
+q3();
+var intervalId = window.setInterval(q3, 2000); //end of interval
+
+function q3(){
 
     img1.removeEventListener("click", pushToArray1);
     img1.id = "imgAnimation"
@@ -291,14 +335,14 @@ var intervalId = window.setInterval(function(){
         parent1.append(img1);
     
     }
-}, 2000); //end of interval
-
+}
     function pushToArray1(){
         answerArray.push(choiceOne);
         clearInterval(intervalId);   
-        document.getElementById('every_window').innerHTML = '';
-        resetQuestion();
-        rngQuestion();
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        nextP();
         }
 };
 
@@ -342,6 +386,7 @@ function questionFour(){
 //-------------------------------CONCLUSION---------------------------------------
 function conclusion(){
     //need to associate answers from answerArray with questions
+    dontDoItConc();
     console.clear();
     console.log(textNumberArray);
     let p1 = document.createElement('p')
@@ -368,13 +413,24 @@ function conclusion(){
     let gp = document.createElement('div')
     let end = document.createElement('p')
     let space = ''
+        gp.classList.add('gp')
     parent1.classList.add('parent')
     parent2.classList.add('parent')
     parent3.classList.add('parent')
     parent4.classList.add('parent')
     parent5.classList.add('parent')
-    parent6.classList.add('end')
-    gp.classList.add('gp')
+    parent6.classList.add('parent')
+
+    p1.classList.add('conc')
+    p2.classList.add('conc')
+    p3.classList.add('conc')
+    p4.classList.add('conc')
+    p5.classList.add('conc')
+    img1.classList.add('concImg')
+    img2.classList.add('concImg')
+    img3.classList.add('concImg')
+    img4.classList.add('concImg')
+    img5.classList.add('concImg')
     end.classList.add('end')
     let i;
     let conc=[];
@@ -415,17 +471,8 @@ function conclusion(){
     img4.src=fullArray[answerArray[3]].fields.Attachments[0].url
     img5.src=fullArray[answerArray[4]].fields.Attachments[0].url      
     end.innerHTML="next"; 
-    p1.classList.add('conc')
-    p2.classList.add('conc')
-    p3.classList.add('conc')
-    p4.classList.add('conc')
-    p5.classList.add('conc')
-    img1.classList.add('concImg')
-    img2.classList.add('concImg')
-    img3.classList.add('concImg')
-    img4.classList.add('concImg')
-    img5.classList.add('concImg')
-    end.addEventListener('click', nextP);
+
+    end.addEventListener('click', lastP);
     document.getElementById('every_window').append(gp);  
     gp.append(parent1, parent2, parent3, parent4, parent5, parent6);
     parent1.append(q1,'\xa0', p1, ".",img1);
@@ -435,9 +482,17 @@ function conclusion(){
     parent5.append(q5,"\xa0", p5,".",img5);
     parent6.append(end);
 
-    function nextP(){
-        document.getElementById('every_window').innerHTML = '';
-        final();
+    function lastP(){
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        setTimeout(function(){
+            document.getElementById('every_window').classList.remove('fadeOut');
+            document.getElementById('question').classList.remove('fadeOut');
+            document.getElementById('question_number').classList.remove('fadeOut');
+            document.getElementById('every_window').innerHTML=''; 
+            final();
+    }, 700);
     }
 }
 //----------------------FINAL--------------------------------------------
@@ -471,9 +526,17 @@ function final(){
     parent4.append(end);
 
     function ending(){
-        location.reload();
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        home();
     }
 }
 function home(){
-    location.reload();
+            document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+    setTimeout(function(){
+        location.reload();
+    }, 700)
 }

@@ -26,13 +26,13 @@ h3:hover{
 
 h4{
   font-size: 0vw;
-  height: 2vh;
+  height: 8vh;
   z-index: 1;
 }
 
 /*------------------properties of images------------------*/
 img{
-  animation: fadeIn 3s ease;
+  animation: fadeInImg .5s ease;
   border-radius: 100vw;
   clip-path: circle(10vw at center);
   padding: 5vw;
@@ -40,7 +40,12 @@ img{
   height: 20vw;
   width: 20vw;
 }
-
+img:nth-of-type(2){
+  animation-delay: 1s;
+}
+img:nth-of-type(3){
+  animation-delay: 2s;
+}
 img:hover{
   cursor: pointer;
   clip-path: circle(12vw at center);
@@ -66,15 +71,14 @@ button{
 
 /*------------------question header------------------*/
 h2{
-  animation: fadeIn 3s forwards;
+  transition: opacity .5s;
   font-family: "IBM Plex Serif";
   font-style: italic;
   font-weight: normal;
   text-align: center;
 }
 #question_number{
-  animation: fadeIn 3s forwards;
-  opacity: 0;
+  transition: opacity .5s;
   align-items: center;
   justify-content: center;
   position: absolute;
@@ -85,15 +89,19 @@ h2{
 }
 
 #question{
-  animation: fadeIn 3s forwards;
-  opacity: 0;
+  transition: opacity .5s;
   position: absolute;
   top: 85vh;
 }
 
-
-
-
+/*---------------PLEASE DONT(blocks user input)--------------------*/ 
+.pleaseDont{
+  position: absolute;
+  height: 50vh;
+  width: 100vw;
+  z-index: 1000;
+}
+  
 /*------------------parent-----------------------------*/
 ul {
   display: flex;
@@ -101,6 +109,7 @@ ul {
   padding: 0px;
   align-items: center;
   height: 80vh;
+  transition: opacity .5s;
   width: 100vw;
   z-index: 0;
 }
@@ -132,36 +141,46 @@ p{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2vw;
+  padding: 1vw;
 }
 .parent{
   opacity: 0;
-  animation: fadeIn 2s ease forwards;
+  animation: fadeIn .5s ease forwards;
 }
 .parent:nth-of-type(2){
-  animation-delay: 1s;
+  animation-delay: .5s;
 }
 .parent:nth-of-type(3){
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .parent:nth-of-type(4){
-  animation-delay: 3s;
+  animation-delay: 1.5s;
 }
 .parent:nth-of-type(5){
-  animation-delay: 4s;
+  animation-delay: 2s;
 }
-/*---conclusion button---*/
+.parent:nth-of-type(6){
+  animation-delay: 2.5s;
+}
+/*--------------------------------conclusion button----------------------*/
 .end{
   font-size: 5vw;
-  transition: opacity .6s, font-size 2s;
+  transition: font-size 2s, background-size 1s;
+  background: 
+    linear-gradient(to right, rgba(100, 200, 200, 0), rgba(100, 200, 200, 0)),
+    linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
 }
 
-.end:hover{
-  font-size: 8vw;
+.end:hover,
+.end:focus{
+  font-size: 6vw;
   cursor: pointer;
-  opacity: 20%;
+  background-size: 0 0.1em, 100% 0.1em;
 }
-/*---adjectives---*/
+/*----------------------------------adjectives---------------------------*/
 .conc{
   transition: font-size 2s;
   opacity: 0;
@@ -177,7 +196,7 @@ p{
     opacity: 100;
   clip-path: circle(20vw at center);
 }
-/*---original images---*/
+/*----------------------------original images---------------------------------*/
 .concImg{
   height: 0vw;
   width: 0vw;
@@ -194,7 +213,7 @@ p{
 .conc:hover +.title{
   opacity: 0;
 }
-/*animation and image properties DURATION MUST MATCH JS*/
+/*------------------animation and image properties DURATION MUST MATCH JS--------------*/
 #imgAnimation{
   height: 30vw;
   width: 30vw;
@@ -218,76 +237,92 @@ p{
   animation: fadeInOut 2s ease infinite;
 }
 
+
+/*---------------------------Fade Out Animation-------------------------------------*/
+.fadeOut{
+  opacity: 0;
+}
 @keyframes fadeIn{
   0%{opacity: 0;}
   100%{opacity: 100%;}
 }
+
+@keyframes fadeOut{
+  0%{opacity: 100%;}
+  100%{opacity: 0%;}
+}
+
+@keyframes fadeInImg{
+  0%{opacity: 0;
+    clip-path: circle(12vw at center);
+    height: 25vw;
+    width: 25vw;}
+  100%{opacity: 100%;
+        clip-path: circle(10vw at center);
+    height: 20vw;
+  width: 20vw;}
+}
+
+@keyframes fadeInImgMobile{
+  0%{opacity: 0;
+    clip-path: circle(12vw at center);
+    height: 25vw;
+    width: 25vw;}
+  100%{opacity: 100%;
+        clip-path: circle(30vw at center);
+    height: 30vw;
+  width: 30vw;}
+}
 /*---------------------------Media Query-------------------------------------*/
 @media only screen and (max-width: 800px) {
-
+/*----------question----------*/
   #question_number{
-    top: 70vh;
+    top: 80vh;
   }
 
   #question{
-    top: 72vh;
+    top: 79vh;
+    font-size: 5vw;
   }
-
-  #imgAnimation{
-    height: 60vw;
-    width: 60vw;
+  /*----------question----------*/
+  .title{
+    font-size: 5vw;
   }
-
-  #imgAnimation:hover{
-   clip-path: circle(27vh at center);
-   height: 60vw;
-   width: 60vw;
-  }
+/*----------conclusion/intro----------*/ 
   .concImg{
     animation: none;
   }
   p{
     font-size: 2vh;  
   }
-
+    .end{
+    font-size: 10vw;
+  }
+/*----------general----------*/
   h4{
-    font-size: 3vh;
+    font-size: 0vh;
+    height: 5vh;
   }
   .parent{
     font-size: 5vw;
   }
-  .end{
-    font-size: 10vw;
-  }
 
   img{
-    animation: fadeIn 6s ease;
-    animation: pulse 5s infinite ease;
-    width: 50vw;
-    height: 50vw;
-    clip-path: circle(50vw at center);
+    animation: fadeInImgMobile 3s ease;
+    width: 30vw;
+    height: 30vw;
+    clip-path: circle(30vw at center);
   }
   
-  img:hover{
-   clip-path: circle(100vw at center);
-   height: 60vw;
-   width: 60vw;
-  }
 
   ul {
-   justify-content: center;
+   justify-content: space-around;
    align-items: center;
    flex-direction: column;
-
-   height: 100vh;
-   width: 100vw;
+   height: 79vh;
+   width: 80vw;
   }
 }
 /*MOBILE ANIMATIONS*/
 
 
-@keyframes pulse{
-  0% {height: 60vw; width: 60vw;   clip-path: circle(30vw at center);}
-  50% {  clip-path: circle(28vw at center); height: 62vw; width: 62vw;}
-  100% {height: 60vw; width: 60vw;   clip-path: circle(30vw at center);}  
-}
