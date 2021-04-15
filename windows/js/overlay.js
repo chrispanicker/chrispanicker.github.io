@@ -51,8 +51,8 @@ let typeThreeConc = [
 'you are afraid that you are ',//6 
 'you see the world as ', //7
 "you're not lonely, you're",//8
-'you are not satisfied by things that are'//9
-'you trust people who are'//10
+'you are not satisfied by things that are',//9
+'you trust people who are',//10
 
 ]
 
