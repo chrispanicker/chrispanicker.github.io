@@ -12,7 +12,6 @@ let typeOneText = [
 'which windows are more repulsive?',//8
 'which windows are louder?',//9
 'which windows are more attractive?',//10
-'which windows are colder?'//11
 ]
 
 let typeOneConc =[
@@ -26,7 +25,6 @@ let typeOneConc =[
 'you get mildly annoyed by things that are',//8
 'you are more aware of things that are',//9
 'you are attracted to those who are',//10
-'you avoid those who are',//11
 ]
 
 let typeThreeText = [
