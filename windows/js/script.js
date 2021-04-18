@@ -14,7 +14,6 @@ function gotWindow(records, fetchNextPage) {
     console.log("found windows");
     //push record to the fullArray
     fullArray.push(...records);
-
     // request more pages
     fetchNextPage();
 }
@@ -25,6 +24,8 @@ function gotAllWindows(err) {
   intro();
 }
 
+
+
 //function that randomly chooses a question type:
 function rngQuestion(){
     if (answerArray.length == 5){
@@ -33,43 +34,113 @@ function rngQuestion(){
     }
     let rngIndex = Math.floor(Math.random()*typeArray.length)
     typeArray[rngIndex]();
+    //showQuestionIcon();
+    title.classList.add('smaller')
     questionNumber(); //See overlay.js
     questionText();
+    dontDoIt();
 }
+//creates a div that blocks you from clicking something while animation is playing
+function dontDoIt(){
+    let pleaseDont = document.createElement('div');
+    pleaseDont.classList.add('pleaseDont')
+    document.getElementById('every_window').append(pleaseDont);
+
+    setTimeout(function(){ 
+        pleaseDont.remove(); 
+    }, 700);
+}
+
+function dontDoItConc(){
+    let pleaseDont = document.createElement('div');
+    pleaseDont.classList.add('pleaseDont')
+    document.getElementById('every_window').append(pleaseDont);
+
+    setTimeout(function(){ 
+        pleaseDont.remove(); 
+    }, 3000);
+}
+
+//loads next page
+function nextP(){
+    setTimeout(function(){
+        document.getElementById('every_window').classList.remove('fadeOut');
+        document.getElementById('question').classList.remove('fadeOut');
+        document.getElementById('question_number').classList.remove('fadeOut');
+        document.getElementById('every_window').innerHTML=''; 
+        resetQuestion();
+        rngQuestion();
+        console.log('yup'); 
+    }, 700);
+       
+    }
+//-------------------------MOBILE-------------------------------------------------------
+/*function showQuestionIcon(x) {
+
+    let qIcon = document.createElement('h4');
+    qIcon.innerHTML = '?'
+    qIcon.addEventListener('click', qHide)
+    qIcon.classList.add('qIcon')
+    document.getElementById('title').append(qIcon);
+
+}
+
+function qHide(){
+    console.log("clicked!")
+    let qText = document.getElementById('question');
+    
+    if (qText.classList.contains('hidden')== true){
+        qText.classList.add('show');
+        qText.classList.remove('hidden')
+    }
+    if (qText.classList.contains('show')== true){
+        qText.classList.add('hidden');
+        qText.classList.remove('show')
+    }
+}*/
+
 //----------------------INTRO--------------------------------------------
 function intro(){
     let p1 = document.createElement('p')
     let p2 = document.createElement('p')
     let p3 = document.createElement('p')
     let end = document.createElement('p')
+    let title = document.createElement('h3')
     let parent1= document.createElement('div')
     let parent2= document.createElement('div')
     let parent3= document.createElement('div')
     let parent4= document.createElement('div')
     let gp = document.createElement('div')
     gp.classList.add('gp')
+    title.classList.add('title')
     p1.innerHTML = "what do you see when you look at a window?"
     p2.innerHTML = "do you see the sky?"
     p3.innerHTML = "or do you see yourself?"
     end.innerHTML = 'start'
-
+    title.innerHTML = "rorschach's windows"
     parent1.classList.add('parent')
     parent2.classList.add('parent')
     parent3.classList.add('parent')
     parent4.classList.add('parent')
     end.classList.add('end')
-    end.addEventListener('click', ending);
+    end.addEventListener('click', start);
+    title.addEventListener("click", home)
     document.getElementById('every_window').append(gp);
+    document.getElementById('title').append(title);
+
     gp.append(parent1, parent2, parent3, parent4,);  
     parent1.append(p1);
     parent2.append(p2);
     parent3.append(p3);
     parent4.append(end);
 
-    function ending(){
-        document.getElementById('every_window').innerHTML = '';    
-        rngQuestion();
+    function start(){
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        nextP();
     }
+
 }
 
 //-------------------------------question type 1 "two choices"---------------------------------------
@@ -121,15 +192,17 @@ function questionOne(){
 
     function pushToArray1(){
         answerArray.push(choiceOne);
-        document.getElementById('every_window').innerHTML = '';
-        resetQuestion();
-        rngQuestion();
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        nextP();
         }
     function pushToArray2(){
         answerArray.push(choiceTwo);
-        document.getElementById('every_window').innerHTML = '';
-        resetQuestion();
-        rngQuestion();
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        nextP();
         }
     }
 };
@@ -196,22 +269,25 @@ function questionTwo(){
 
     function pushToArray1(){
         answerArray.push(choiceOne);
-        document.getElementById('every_window').innerHTML = '';
-        resetQuestion();
-        rngQuestion();
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        nextP();
         }
     function pushToArray2(){
         answerArray.push(choiceTwo);
-        document.getElementById('every_window').innerHTML = '';
-        resetQuestion();
-        rngQuestion();
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        nextP();
         }
     function pushToArray3(){
         answerArray.push(choiceThree);
-        document.getElementById('every_window').innerHTML = '';
-        resetQuestion();
-        rngQuestion();
-        }
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        nextP();
+                }
     }
 };
 
@@ -222,21 +298,22 @@ function questionThree(){
     document.getElementById("question_number").classList.add('questionThree')
     currentType = 3;
     console.log('Question Type 3')
-
     let choiceOne;
     let img1 = document.createElement("img")
-    let imgAmount = 0;
+    let parent1 = document.createElement("div")
 
 //creating a 3 second interval to generate new images
-var intervalId = window.setInterval(function(){
+q3();
+var intervalId = window.setInterval(q3, 2000); //end of interval
 
+function q3(){
+    parent1.remove(img1);
     img1.removeEventListener("click", pushToArray1);
     img1.id = "imgAnimation"
     choiceOne = Math.floor(Math.random()*100);
 
     if (every_window) {
         // define and create elements
-        let parent1 = document.createElement("div")
 
         //function that turns value into string
         String(choiceOne);
@@ -256,14 +333,14 @@ var intervalId = window.setInterval(function(){
         parent1.append(img1);
     
     }
-}, 2000); //end of interval
-
+}
     function pushToArray1(){
         answerArray.push(choiceOne);
         clearInterval(intervalId);   
-        document.getElementById('every_window').innerHTML = '';
-        resetQuestion();
-        rngQuestion();
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        nextP();
         }
 };
 
@@ -307,6 +384,7 @@ function questionFour(){
 //-------------------------------CONCLUSION---------------------------------------
 function conclusion(){
     //need to associate answers from answerArray with questions
+    dontDoItConc();
     console.clear();
     console.log(textNumberArray);
     let p1 = document.createElement('p')
@@ -319,6 +397,11 @@ function conclusion(){
     let q3 = document.createElement('p')
     let q4 = document.createElement('p')
     let q5 = document.createElement('p')
+    let img1 = document.createElement("img")
+    let img2 = document.createElement("img")
+    let img3 = document.createElement("img")
+    let img4 = document.createElement("img")
+    let img5 = document.createElement("img")
     let parent1 = document.createElement('div')
     let parent2 = document.createElement('div')
     let parent3 = document.createElement('div')
@@ -328,13 +411,25 @@ function conclusion(){
     let gp = document.createElement('div')
     let end = document.createElement('p')
     let space = ''
+        gp.classList.add('gp')
     parent1.classList.add('parent')
     parent2.classList.add('parent')
     parent3.classList.add('parent')
     parent4.classList.add('parent')
     parent5.classList.add('parent')
-    parent6.classList.add('end')
-    gp.classList.add('gp')
+    parent6.classList.add('parent')
+
+    p1.classList.add('conc')
+    p2.classList.add('conc')
+    p3.classList.add('conc')
+    p4.classList.add('conc')
+    p5.classList.add('conc')
+    img1.classList.add('concImg')
+    img2.classList.add('concImg')
+    img3.classList.add('concImg')
+    img4.classList.add('concImg')
+    img5.classList.add('concImg')
+    end.classList.add('end')
     let i;
     let conc=[];
     let conc1;
@@ -367,21 +462,35 @@ function conclusion(){
     p3.innerHTML=(fullArray[answerArray[2]].fields.Feeling);
     p4.innerHTML=(fullArray[answerArray[3]].fields.Feeling);
     p5.innerHTML=(fullArray[answerArray[4]].fields.Feeling); 
+    //IMGS FOR HOVER INT
+    img1.src= fullArray[answerArray[0]].fields.Attachments[0].url
+    img2.src=fullArray[answerArray[1]].fields.Attachments[0].url
+    img3.src=fullArray[answerArray[2]].fields.Attachments[0].url  
+    img4.src=fullArray[answerArray[3]].fields.Attachments[0].url
+    img5.src=fullArray[answerArray[4]].fields.Attachments[0].url      
     end.innerHTML="next"; 
-    end.addEventListener('click', nextP);
 
+    end.addEventListener('click', lastP);
     document.getElementById('every_window').append(gp);  
     gp.append(parent1, parent2, parent3, parent4, parent5, parent6);
-    parent1.append(q1,'\xa0', p1, ".");
-    parent2.append(q2,'\xa0', p2,".");
-    parent3.append(q3,"\xa0", p3,".");
-    parent4.append(q4,"\xa0", p4,".");
-    parent5.append(q5,"\xa0", p5,".");
+    parent1.append(q1,'\xa0', p1, ".",img1);
+    parent2.append(q2,'\xa0', p2,".",img2);
+    parent3.append(q3,"\xa0", p3,".",img3);
+    parent4.append(q4,"\xa0", p4,".",img4);
+    parent5.append(q5,"\xa0", p5,".",img5);
     parent6.append(end);
 
-    function nextP(){
-        document.getElementById('every_window').innerHTML = '';
-        final();
+    function lastP(){
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        setTimeout(function(){
+            document.getElementById('every_window').classList.remove('fadeOut');
+            document.getElementById('question').classList.remove('fadeOut');
+            document.getElementById('question_number').classList.remove('fadeOut');
+            document.getElementById('every_window').innerHTML=''; 
+            final();
+    }, 700);
     }
 }
 //----------------------FINAL--------------------------------------------
@@ -415,6 +524,17 @@ function final(){
     parent4.append(end);
 
     function ending(){
-        location.reload();
+        document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+        home();
     }
+}
+function home(){
+            document.getElementById('every_window').classList.add('fadeOut');
+        document.getElementById('question').classList.add('fadeOut');
+        document.getElementById('question_number').classList.add('fadeOut');
+    setTimeout(function(){
+        location.reload();
+    }, 700)
 }

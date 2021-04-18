@@ -6,10 +6,33 @@ body{
   margin: 0;
   padding: 0;
 }
+/*------------------title------------------*/
+h3{ 
+  font-family: "IBM Plex Serif";
+  font-style: italic;
+  font-size: 1.8vw;
+  font-weight: normal;
+  height: 1vw;
+  transition: font-size 2s, opacity 1s;
+  padding: 0;
+  z-index: 1;
+}
+h3:hover{
+  cursor: pointer;
+  font-size: 2.7vw;
+  padding: 0;
+  opacity: 30%;
+}
 
-/*properties of images*/
+h4{
+  font-size: 0vw;
+  height: 8vh;
+  z-index: 1;
+}
+
+/*------------------properties of images------------------*/
 img{
-  animation: fadeIn 3s ease;
+  animation: fadeInImg .5s ease;
   border-radius: 100vw;
   clip-path: circle(10vw at center);
   padding: 5vw;
@@ -17,14 +40,20 @@ img{
   height: 20vw;
   width: 20vw;
 }
-
+img:nth-of-type(2){
+  animation-delay: 1s;
+}
+img:nth-of-type(3){
+  animation-delay: 2s;
+}
 img:hover{
+  cursor: pointer;
   clip-path: circle(12vw at center);
   height: 25vw;
   width: 25vw;
 }
 
-/*question 4*/
+/*------------------question 4------------------*/
 input{
   font-family: "IBM Plex Serif";
   font-style: italic;
@@ -40,16 +69,16 @@ button{
 }
 
 
-
-/*question header*/
+/*------------------question header------------------*/
 h2{
-  animation: fadeIn 3s;
+  transition: opacity .5s;
   font-family: "IBM Plex Serif";
   font-style: italic;
   font-weight: normal;
   text-align: center;
 }
 #question_number{
+  transition: opacity .5s;
   align-items: center;
   justify-content: center;
   position: absolute;
@@ -60,25 +89,32 @@ h2{
 }
 
 #question{
+  transition: opacity .5s;
   position: absolute;
   top: 85vh;
 }
 
-
-
-
-/*parent*/
+/*---------------PLEASE DONT(blocks user input)--------------------*/ 
+.pleaseDont{
+  position: absolute;
+  height: 50vh;
+  width: 100vw;
+  z-index: 1000;
+}
+  
+/*------------------parent-----------------------------*/
 ul {
   display: flex;
   justify-content: center;
   padding: 0px;
   align-items: center;
-  height: 90vh;
+  height: 80vh;
+  transition: opacity .5s;
   width: 100vw;
   z-index: 0;
 }
 
-/*grandparent*/
+/*------------------grandparent------------------*/
 section{
   display: flex;
   justify-content: center;
@@ -89,7 +125,7 @@ section{
 
 
 
-/*conclusion*/
+/*---------------------------conclusion-------------------------------------*/
 p{
   margin: 0;
   padding: 0;
@@ -105,45 +141,86 @@ p{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3vw;
+  padding: 1vw;
 }
 .parent{
   opacity: 0;
-  animation: fadeIn 2s ease forwards;
+  animation: fadeIn .5s ease forwards;
 }
 .parent:nth-of-type(2){
-  animation-delay: 1s;
+  animation-delay: .5s;
 }
 .parent:nth-of-type(3){
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .parent:nth-of-type(4){
-  animation-delay: 3s;
+  animation-delay: 1.5s;
 }
 .parent:nth-of-type(5){
-  animation-delay: 4s;
+  animation-delay: 2s;
 }
-
+.parent:nth-of-type(6){
+  animation-delay: 2.5s;
+}
+/*--------------------------------conclusion button----------------------*/
 .end{
   font-size: 5vw;
-  transition: opacity .6s;
+  transition: font-size 2s, background-size 1s;
+  background: 
+    linear-gradient(to right, rgba(100, 200, 200, 0), rgba(100, 200, 200, 0)),
+    linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
 }
 
-.end:hover{
-  opacity: 20%;
+.end:hover,
+.end:focus{
+  font-size: 6vw;
+  cursor: pointer;
+  background-size: 0 0.1em, 100% 0.1em;
 }
-
-.gp{
-
+/*----------------------------------adjectives---------------------------*/
+.conc{
+  transition: font-size 2s;
+  opacity: 0;
+  animation: fadeIn 4s forwards;
+ color: grey;
 }
-/*animation and image properties DURATION MUST MATCH JS*/
+.conc:hover{
+  font-size: 5vw;
+}
+.conc:hover + .concImg{
+  height: 10vw;
+  width: 10vw;
+    opacity: 100;
+  clip-path: circle(20vw at center);
+}
+/*----------------------------original images---------------------------------*/
+.concImg{
+  height: 0vw;
+  width: 0vw;
+  clip-path: circle(10vw at center);
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  transition: height 2s, width 2s, clip-path 2s, opacity 3s;
+}
+.concImg:hover{
+  cursor: default;
+  opacity: 100;
+}
+.conc:hover +.title{
+  opacity: 0;
+}
+/*------------------animation and image properties DURATION MUST MATCH JS--------------*/
 #imgAnimation{
   height: 30vw;
   width: 30vw;
   clip-path: circle(25vh at center);
   animation: fadeInOut 2s ease infinite;
   transition: clip-path 2s, height 1s, width 1s,;
-  transition-timing-function: ease;
+  z-index: -1;
 }
 #imgAnimation:hover{
    clip-path: circle(27vh at center);
@@ -160,58 +237,90 @@ p{
   animation: fadeInOut 2s ease infinite;
 }
 
+
+/*---------------------------Fade Out Animation-------------------------------------*/
+.fadeOut{
+  opacity: 0;
+}
 @keyframes fadeIn{
   0%{opacity: 0;}
   100%{opacity: 100%;}
 }
 
+@keyframes fadeOut{
+  0%{opacity: 100%;}
+  100%{opacity: 0%;}
+}
+
+@keyframes fadeInImg{
+  0%{opacity: 0;
+    clip-path: circle(12vw at center);
+    height: 25vw;
+    width: 25vw;}
+  100%{opacity: 100%;
+        clip-path: circle(10vw at center);
+    height: 20vw;
+  width: 20vw;}
+}
+
+@keyframes fadeInImgMobile{
+  0%{opacity: 0;
+    clip-path: circle(12vw at center);
+    height: 25vw;
+    width: 25vw;}
+  100%{opacity: 100%;
+        clip-path: circle(30vw at center);
+    height: 40vw;
+  width: 40vw;}
+}
+/*---------------------------Media Query-------------------------------------*/
 @media only screen and (max-width: 800px) {
+/*----------question----------*/
   #question_number{
-    top: 70vh;
+    top: 80vh;
   }
 
   #question{
-    top: 72vh;
+    top: 79vh;
+    font-size: 5vw;
   }
-
-  #imgAnimation{
-    height: 60vw;
-    width: 60vw;
+  /*----------question----------*/
+  .title{
+    font-size: 5vw;
   }
-
-  #imgAnimation:hover{
-   clip-path: circle(27vh at center);
-   height: 60vw;
-   width: 60vw;
+/*----------conclusion/intro----------*/ 
+  .concImg{
+    animation: none;
   }
-
+  p{
+    font-size: 2vh;  
+  }
+    .end{
+    font-size: 10vw;
+  }
+/*----------general----------*/
+  h4{
+    font-size: 0vh;
+    height: 5vh;
+  }
   .parent{
     font-size: 5vw;
   }
-  .end{
-    font-size: 10vw;
-  }
 
   img{
-    animation: fadeIn 6s ease;
-    width: 50vw;
-    height: 50vw;
-    clip-path: circle(50vw at center);
+    animation: fadeInImgMobile 3s ease;
+    width: 40vw;
+    height: 40vw;
+    clip-path: circle(30vw at center);
   }
   
-  img:hover{
-   clip-path: circle(100vw at center);
-   height: 60vw;
-   width: 60vw;
-  }
 
   ul {
-   justify-content: center;
+   justify-content: space-around;
    align-items: center;
    flex-direction: column;
-
-   height: 100vh;
-   width: 100vw;
+   height: 79vh;
+   width: 80vw;
   }
 }
 /*MOBILE ANIMATIONS*/
