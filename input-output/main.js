@@ -1,6 +1,7 @@
-let p1 = document.createElement('p');
+let h3 = document.createElement('h3');
+
 
 document.addEventListener('keydown', e => {
-	p1.innerHTML=e.key;
-	document.querySelector('#type').append(p1);
+	h3.innerHTML=e.key;
+	document.querySelector('#type').append(h3);
 });
