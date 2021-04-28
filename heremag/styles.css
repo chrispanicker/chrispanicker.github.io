@@ -1,0 +1,172 @@
+/*---------------------------------------General Page Shit-------------------------------------*/
+@font-face {
+  font-family: 'Frutiger-Condensed';
+  src:  url('./fonts/Frutiger-Cn.woff') format('woff');
+}
+*{
+	font-family: Frutiger-Condensed
+}
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #ffdad5;
+}
+#main{
+	height: 300vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.blank-space{
+	height: 10vw;
+}
+
+
+/*---------------------------------------CSS To-Go-------------------------------------*/
+.border{
+	border: .2vw solid black;
+	margin-top: -.2vw;
+    margin-left: -.2vw;
+}
+
+.shadow{
+	box-shadow: .3vw .3vw;
+	color: black;
+}
+
+.lucy{
+	background-color: #466895;
+}
+.kkb{
+	background-color: #D90000;
+}
+.jai{
+	background-color: tan;
+}
+.roy{
+	background-color: teal;
+}
+/*---------------------------------------MENU BAR-------------------------------------*/
+#menu{
+	position: fixed;
+	width: 100vw
+	display: flex;
+	align-content: space-around;
+	z-index: 100;
+}
+#menu img{
+	padding: 2vw;
+	height: 9vw;
+}
+/*---------------------------------------Slideshow-------------------------------------*/
+.slideshow{
+	background-color: #7f5e67;
+	width: 100vw;
+	height: 20vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.slideshow img{
+	height: 15vw;
+	width: 15vw;
+}
+
+.slideshow img{
+	height: 15vw;
+	width: 15vw;
+}
+
+/*---------------------------------------Articles-------------------------------------*/
+.articles{
+	display: flex; 
+	width: 100vw;
+}
+
+.info{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 50vw;
+	padding-bottom: 3vw;
+}
+
+.info h2{
+	font-size: 2vw;
+	margin-left: 5vw;
+	margin-right: 5vw;
+	margin-top: 0;
+}
+.info img{
+	margin: 2vw;
+	width: 25vw;
+}
+
+.linking{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+a{
+	color: black;
+	background-color: white;
+	padding-left: .5vw;
+	padding-right: .5vw;
+	border-radius: 100vw;
+	text-decoration: none;
+	font-size: 1vw;
+}
+
+/*----------------------------------------TICKER--------------------------------------------*/
+.marquee {
+	background-color: white;
+	border-radius: 100vw;
+	color: black;
+  	width: 90vw;
+  	margin: 2vw;
+  	padding: 2vw;
+  	font-size: 2vw;
+  	overflow: hidden;
+ 	box-sizing: border-box;
+	z-index: 101;
+}
+
+.marquee span {
+  display: inline-block;
+  width: max-content;
+  /* show the marquee just outside the paragraph */
+  will-change: transform;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee span:hover {
+  animation-play-state: paused
+}
+
+
+@keyframes marquee {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-50%, 0); }
+}
+
+
+/* Respect user preferences about animations */
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee span {
+    animation-iteration-count: 1;
+    animation-duration: 0.01; 
+    /* instead of animation: none, so an animationend event is 
+     * still available, if previously attached.
+     */
+    width: auto;
+    padding-left: 0;
+  }
+}
