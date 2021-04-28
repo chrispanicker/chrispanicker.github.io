@@ -20,6 +20,18 @@ body{
 }
 
 .blank-space{
+	height: 13vw;
+}
+
+
+.button{
+	height: 9vw;
+	transition: height 1s;
+	margin: auto;
+	padding: 10vw;
+}
+
+.button:hover{
 	height: 10vw;
 }
 
@@ -48,18 +60,24 @@ body{
 .roy{
 	background-color: teal;
 }
+
+.toro{
+	background-color: lightblue;
+}
 /*---------------------------------------MENU BAR-------------------------------------*/
 #menu{
 	position: fixed;
-	width: 100vw
+	width: 100vw;
+	height: 10vw;
 	display: flex;
 	align-content: space-around;
 	z-index: 100;
 }
 #menu img{
 	padding: 2vw;
-	height: 9vw;
 }
+
+
 /*---------------------------------------Slideshow-------------------------------------*/
 .slideshow{
 	background-color: #7f5e67;
@@ -117,15 +135,17 @@ body{
 a{
 	color: black;
 	background-color: white;
-	padding-left: .5vw;
-	padding-right: .5vw;
+	padding-left: .9vw;
+	padding-right: .9vw;
 	border-radius: 100vw;
 	text-decoration: none;
-	font-size: 1vw;
+	font-size: 2vw;
 }
 
 /*----------------------------------------TICKER--------------------------------------------*/
 .marquee {
+	position: fixed;
+	top: 85vh;
 	background-color: white;
 	border-radius: 100vw;
 	color: black;
