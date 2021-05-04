@@ -19,7 +19,8 @@ var updateRate = 1/60; // Sensor refresh rate
 
 function getAccel(){
     makeGoal();
-
+    document.getElementById('accelPermsButton').classList.add('vanish');
+    document.getElementById('accelPermsButton').classList.remove('willVanish');
     console.log('pressed')
     DeviceMotionEvent.requestPermission().then(response => {
         if (response == 'granted') {
@@ -60,9 +61,9 @@ function getAccel(){
 </script>
 <!-----------------------------------Elements!----------------------------------------->
 <div class='overlay'><h1>DILLY</h1><h1>DALLY</h1></div>
-  
-
-
+<div class='permissions'>
+    <button id="accelPermsButton" class = 'willVanish' onclick="getAccel()"><h1>PLEASE ALLOW GYRO</h1></button>
+</div>
 <div id='main'></div>
 </body>
 </html>

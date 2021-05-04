@@ -21,10 +21,18 @@ body{
 	height: 98vh;
 	width: 98vw;
 }
+
+button{
+	background-color: var(--icey);
+	color: white;
+	border: none;
+	text-decoration: underline;
+	z-index: 100;
+}
 /*-------------Title-----------------*/
 .overlay{
 width: 98vw;
-height: 80vh;
+height: 86vh;
 color: var(--cheesy);
 position: fixed;
 font-size: 7vh;
@@ -39,6 +47,15 @@ z-index: -100;
 h1{
 padding: 0;
 margin: 0;
+}
+
+.permissions{
+	position: fixed;
+	height: 86vh;
+	width: 98vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 /*--------------PLAYSPACE------------------------*/
 #parent{ 

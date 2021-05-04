@@ -3,7 +3,6 @@ let goal;
 
 window.onload = function(){
     levelOne();
-    getAccel();
 }
 
 
