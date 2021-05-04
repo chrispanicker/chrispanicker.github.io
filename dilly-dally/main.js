@@ -26,10 +26,10 @@ function makeGoal(){
 
 function collideCheck(){
     var goalBounds = goal.getBoundingClientRect();
-    gl = goalBounds.left;
-    gt = goalBounds.top;
-    gr = goalBounds.right;
-    gb = goalBounds.bottom;
+    gl = goalBounds.left+(.03*goalBounds.left);
+    gt = goalBounds.top+(.03*goalBounds.top);
+    gr = goalBounds.right+(.03*goalBounds.right);
+    gb = goalBounds.bottom+(.03*goalBounds.bottom);
     
     var ballBounds = ball.getBoundingClientRect();
     bl = ballBounds.left;

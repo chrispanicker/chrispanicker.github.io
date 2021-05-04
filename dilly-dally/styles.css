@@ -68,8 +68,8 @@ margin: 0;
 .ball{ 
 	left: 30%;
 	top: 30%;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     background-color: white;
     border-radius: 50%;
     position:fixed;
@@ -77,8 +77,8 @@ margin: 0;
 
 .goal{
 	opacity: 100%;
-	width: 30px;
-	height: 30px;
+	width: 80px;
+	height: 80px;
 	background-color: var(--icey);
 	position: fixed;
 	border-radius: 50%
