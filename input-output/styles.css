@@ -1,6 +1,77 @@
-.indicatorDot{
+:root {
+	--strawberry: #ff6965;
+	--icey: #7996e8;
+	--cheesy: #ffe359;
+}
+
+@font-face {
+  font-family: 'Akzidenz-Grotesk';
+  src:  url('./fonts/AkzidenzGroteskBE-Super.woff') format('woff');
+}
+
+*{
+	font-family: Akzidenz-Grotesk;
+}
+
+body{
+	background-color: var(--strawberry);
+}
+
+#main{
+	height: 98vh;
+	width: 98vw;
+}
+/*-------------Title-----------------*/
+.overlay{
+width: 98vw;
+height: 80vh;
+color: var(--cheesy);
+position: fixed;
+font-size: 7vh;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+z-index: -100;
+}
+
+h1{
+padding: 0;
+margin: 0;
+}
+/*--------------PLAYSPACE------------------------*/
+#parent{ 
+	background-color: var(--icey);
+	height: 50vh;
+	width: 50vh;
+}
+
+
+.ball{ 
+	left: 30%;
+	top: 30%;
     width: 30px;
     height: 30px;
-    background-color: #ffab56;
+    background-color: white;
     border-radius: 50%;
     position:fixed;
+}
+
+.goal{
+	opacity: 100%;
+	width: 30px;
+	height: 30px;
+	background-color: var(--icey);
+	position: fixed;
+	border-radius: 50%
+}
+
+/*-------------Transitions-----------------*/
+.vanish{
+	opacity: 0%;
+}
+
+.willVanish{
+	transition: opacity 1s;
+}

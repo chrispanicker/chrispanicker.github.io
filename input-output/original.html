@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>Input-Output (LIVE DEMO)</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-<!--------------------------------------LIVE VERSION------------------------------->
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dilly Dally (LIVE DEMO)</title>
 
-<body>
-<script src="main.js"></script>
-<script>
+        <style>
+        .indicatorDot{
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 50%;
+            position:fixed;
+        }
+        </style>
+    <script src="main.js"></script>
+    <script>
 var px = 50; // Position x and y
 var py = 50;
 var vx = 0.0; // Velocity x and y
@@ -18,9 +22,6 @@ var vy = 0.0;
 var updateRate = 1/60; // Sensor refresh rate
 
 function getAccel(){
-    makeGoal();
-
-    console.log('pressed')
     DeviceMotionEvent.requestPermission().then(response => {
         if (response == 'granted') {
        // Add a listener to get smartphone orientation 
@@ -33,36 +34,36 @@ function getAccel(){
                 
                 // Update velocity according to how tilted the phone is
                 // Since phones are narrower than they are long, double the increase to the x velocity
-                vx = vx + leftToRight_degrees * updateRate*.5; 
-                vy = vy + frontToBack_degrees * updateRate*.25;
+                vx = vx + leftToRight_degrees * updateRate*2; 
+                vy = vy + frontToBack_degrees * updateRate;
                 
                 // Update position and clip it to bounds
-                px = px + vx*.1;
-                if (px > 93 || px < 0){ 
-                    px = Math.max(0, Math.min(93, px)) // Clip px between 0-98
+                px = px + vx*.5;
+                if (px > 98 || px < 0){ 
+                    px = Math.max(0, Math.min(98, px)) // Clip px between 0-98
                     vx = 0;
                 }
 
-                py = py + vy*.1;
-                if (py > 96 || py < 0){
-                    py = Math.max(0, Math.min(96, py)) // Clip py between 0-98
+                py = py + vy*.5;
+                if (py > 98 || py < 0){
+                    py = Math.max(0, Math.min(98, py)) // Clip py between 0-98
                     vy = 0;
                 }
-                    collideCheck();
-                dot = document.getElementsByClassName("ball")[0]
+                
+                dot = document.getElementsByClassName("indicatorDot")[0]
                 dot.setAttribute('style', "left:" + (px) + "%;" +
                                               "top:" + (py) + "%;");
+                collideCheck();
                 
             });
         }
     });
 }
 </script>
-<!-----------------------------------Elements!----------------------------------------->
-<div class='overlay'><h1>DILLY</h1><h1>DALLY</h1></div>
-  
 
-
-<div id='main'></div>
-</body>
+    </head>
+    <body style="background-color:#7996e8;">
+        <button id="accelPermsButton"  style="height:50px;" onclick="getAccel()"><h1>Get Accelerometer Permissions</h1></button>
+        <div class="indicatorDot" style="left:30%; top:30%;"></div>
+    </body>
 </html>
