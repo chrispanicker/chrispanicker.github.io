@@ -1,1 +1,3 @@
-main.js
+function home(){
+	window.location='index.html';
+}

@@ -51,7 +51,7 @@ body{
 .lucy{
 	background-color: #466895;
 }
-.kkb{
+.joji{
 	background-color: #D90000;
 }
 .jai{
@@ -61,8 +61,8 @@ body{
 	background-color: teal;
 }
 
-.toro{
-	background-color: lightblue;
+.letter{
+	background-color: #F5DDB8;
 }
 /*---------------------------------------MENU BAR-------------------------------------*/
 #menu{
@@ -119,6 +119,7 @@ body{
 	margin-left: 5vw;
 	margin-right: 5vw;
 	margin-top: 0;
+	text-align: center;
 }
 .info img{
 	margin: 2vw;
@@ -141,11 +142,14 @@ a{
 	text-decoration: none;
 	font-size: 2vw;
 }
+a:hover{
+	font-size: 2.2vw;
+	box-shadow: .7vw .7vw;}
 
 /*----------------------------------------TICKER--------------------------------------------*/
 .marquee {
 	position: fixed;
-	top: 85vh;
+	bottom: 2vh;
 	background-color: white;
 	border-radius: 100vw;
 	color: black;
@@ -189,4 +193,22 @@ a{
     width: auto;
     padding-left: 0;
   }
+}
+
+/*----------------------------------------Banner--------------------------------------------*/
+.banner{
+	height: 50vh;
+}
+
+/*----------------------------------------Reading--------------------------------------------*/
+.reading{
+	margin: 1vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60vw;
+}
+
+h3{
+	padding: 1vw;
 }
