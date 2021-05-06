@@ -8,7 +8,7 @@
 <!--------------------------------------LIVE VERSION------------------------------->
 </head>
 
-<body>
+<body id="grandpa" class='cheesy'>  
 <script src="main.js"></script>
 <script>
 var px = 50; // Position x and y
@@ -19,8 +19,9 @@ var updateRate = 1/60; // Sensor refresh rate
 
 function getAccel(){
     makeGoal();
-    document.getElementById('accelPermsButton').classList.add('vanish');
-    document.getElementById('accelPermsButton').classList.remove('willVanish');
+    document.getElementById('accelPermsButton').remove();
+    document.getElementById('permissions').remove();
+
     console.log('pressed')
     DeviceMotionEvent.requestPermission().then(response => {
         if (response == 'granted') {
@@ -37,22 +38,29 @@ function getAccel(){
                 vx = vx + leftToRight_degrees * updateRate*1.5; 
                 vy = vy + frontToBack_degrees * updateRate;
                 
+                bkgB = document.getElementById('bkg');
+                var bkgBounds = bkgB.getBoundingClientRect();
+                bkgl = bkgBounds.left;
+                bkgt = bkgBounds.top;
+                bkgr = bkgBounds.right -20;
+                bkgb = bkgBounds.bottom -20;
+
                 // Update position and clip it to bounds
-                px = px + vx*.2;
-                if (px > 93 || px < 0){ 
-                    px = Math.max(0, Math.min(93, px)) // Clip px between 0-98
+                px = px + vx*.5;
+                if (px > bkgr || px < bkgl){ 
+                    px = Math.max(bkgl, Math.min(bkgr, px)) // Clip px between 0-98
                     vx = 0;
                 }
 
-                py = py + vy*.2;
-                if (py > 96 || py < 0){
-                    py = Math.max(0, Math.min(96, py)) // Clip py between 0-98
+                py = py + vy*.5;
+                if (py > bkgb || py < bkgt){
+                    py = Math.max(bkgt, Math.min(bkgb, py)) // Clip py between 0-98
                     vy = 0;
                 }
                     collideCheck();
                 dot = document.getElementsByClassName("ball")[0]
-                dot.setAttribute('style', "left:" + (px) + "%;" +
-                                              "top:" + (py) + "%;");
+                dot.setAttribute('style', "left:" + (px) + "px;" +
+                                              "top:" + (py) + "px;");
                 
             });
         }
@@ -60,10 +68,13 @@ function getAccel(){
 }
 </script>
 <!-----------------------------------Elements!----------------------------------------->
-<div class='overlay'><h1>DILLY</h1><h1>DALLY</h1></div>
-<div class='permissions'>
+<div class='overlay' id="overlay"><h1 onclick="shhh()">DILLY</h1><h1 onclick='shhh2()'>DALLY</h1></div>
+<div class='permissions' id='permissions'>
     <button id="accelPermsButton" class = 'willVanish' onclick="getAccel()"><h1>PLEASE ALLOW GYRO</h1></button>
 </div>
-<div id='main'></div>
+<div id='main'>
+    <div id='goalDiv'></div>
+</div>
+
 </body>
 </html>
