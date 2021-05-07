@@ -177,3 +177,30 @@ margin: 0;
     80%{background-color:blue;}
     100%{background-color:indigo;}
 }
+/*-------------DESKTOP OVERLAY-----------------*/
+
+  #desktop{
+  display: none;
+  font-size: 3vw;	
+  color: var(--bkg)
+  }
+@media only screen and (min-width: 900px) {
+  .goal {
+    display: none;
+  }
+  .ball{
+  	display: none;
+  }
+  .bkg{
+  	display: none;
+  }
+  .play{
+  	display: none;
+  }
+  .permissions{
+  	display: none;
+  }
+  #desktop{
+  	display: block;
+  }
+}
