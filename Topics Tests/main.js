@@ -1,5 +1,12 @@
 let main = document.getElementById('main');
 
+let scriptArray= ['what are you',
+'who are you',
+'who am i?']
+
+
+
+
 function start(){
 	let start = document.getElementById('div1');
 	start.classList.add('gone');
@@ -39,6 +46,17 @@ function page3(){
 	
 	let page3text= document.createElement('p');
 	page3text.innerHTML='do you know yourself?'
+	
+	page3.append(page3text);
+	document.getElementById('main').append(page3);
+}
+
+function page4(){
+	s page3 = document.createElement('div');
+	page3.classList.add('test');
+	
+	let page3text= document.createElement('p');
+	page3text.innerHTML='do you know?'
 	
 	page3.append(page3text);
 	document.getElementById('main').append(page3);
