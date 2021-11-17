@@ -1,7 +1,7 @@
 document.addEventListener('keydown', okay)
 var msg1 ='Hello, I\'m Chris.';
 var msg2 ='I\'m from Virginia.';
-var msg3 ='Oh I get it, my family is from India';
+var msg3 ='Oh I get it, my family is from India.';
 
 //incrementing
 let wordNumber=-1;

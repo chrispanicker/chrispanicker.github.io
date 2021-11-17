@@ -34,11 +34,12 @@ p{
 
 #chatBox{
 	height: 5vh;
+	width: 100vw;
 	background-color: #A67B60;
 	color:  #7C3E20;
 	display: flex;
+	justify-content: center;
 	align-items: flex-end;
-	padding-left: 2vw;
 	}
 
 #responses{
