@@ -23,7 +23,7 @@ function page1(){
 	
 	page1.append(page1text);
 	document.getElementById('main').append(page1);
-	setTimeout(function(){page1.remove(); page2();}, 5000);
+	setTimeout(function(){page1.remove(); page2();}, 2000);
 }
 
 
@@ -37,7 +37,7 @@ function page2(){
 	
 	page2.append(page2text);
 	document.getElementById('main').append(page2);
-	setTimeout(function(){page2.remove(); page3();}, 5000);
+	setTimeout(function(){page2.remove(); page3();}, 2000);
 }
 
 function page3(){
@@ -49,15 +49,15 @@ function page3(){
 	
 	page3.append(page3text);
 	document.getElementById('main').append(page3);
+	setTimeout(function(){page3.remove(); nextPage();}, 2000);
 }
 
-function page4(){
-	s page3 = document.createElement('div');
-	page3.classList.add('test');
-	
-	let page3text= document.createElement('p');
-	page3text.innerHTML='do you know?'
-	
-	page3.append(page3text);
-	document.getElementById('main').append(page3);
+function nextPage(){
+	let nextPDiv = document.createElement('div');
+	let nextP = document.createElement('a');
+	nextP.classList.add('test');
+	nextP.href= './test2.html'
+	nextP.innerHTML='onto the next test...';
+	nextPDiv.append(nextP);
+	document.getElementById('main').append(nextPDiv)
 }

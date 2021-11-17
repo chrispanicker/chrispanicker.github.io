@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+
+
 #div1{
 	background-color: #7C3E20;
 	transition: opacity 2s;
@@ -10,6 +13,7 @@ body{
 
 *{
 	color: #A67B60;
+	font-family: 'Zen Antique Soft', serif;
 }
 
 
@@ -31,8 +35,7 @@ section{
 }
 
 .test{
-	background-color: white;
-}
+	color: #E7AA82;
 
 
 
