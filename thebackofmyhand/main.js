@@ -1,7 +1,5 @@
 let main = document.getElementById('main');
 
-
-
 function start(){
 	let start = document.getElementById('div1');
 	start.classList.add('disappear');
@@ -64,10 +62,30 @@ function logo(){
 	let logo = document.createElement('div');
 	//page3.classList.add('test');
 	
-	let logotext= document.createElement('p');
-	logotext.innerHTML='(LOGO GOES HERE)'
+	let logo1text= document.createElement('h2');
+	logo1text.classList.add('logo1Text')
+	logo1text.innerHTML='The Back'
+
+	let logo2text= document.createElement('h2');
+	logo2text.classList.add('logo2Text')
+	logo2text.innerHTML='of My Hand'
+
 	
-	logo.append(logotext);
+	logo.append(logo1text, logo2text);
 	document.getElementById('main').append(logo);
-	//setTimeout(function(){openHomePage(); }, 4000);
+	setTimeout(function(){logo.classList.add("disappear"); }, 4000);
+	setTimeout(function(){window.open("./intro/foreword.html","_self"); }, 6000);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

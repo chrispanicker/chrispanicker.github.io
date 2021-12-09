@@ -22,8 +22,7 @@
 }
 
 body{
-	background-color: #4F321F;
-	transition: background-color 2s;
+	background-color: #5B3421;
 	width: 100vw;
 	height: 100vh;
 }
@@ -38,49 +37,11 @@ body{
 }
 
 p{
-	font-size: 2em;
-}
-
-h2{
-	font-size: 4em;
-}
-
-button{
+	font-size: 1.5vw;
 	color: #7F5639;
-	border: none;
-	font-size: 2em;
-	background-color: transparent;
-	text-decoration: underline;
+	column-count: 2;
 }
 
-div{
-	opacity: 100;
-	transition: opacity 2s;
+section{
+	width: 50;
 }
-
-.fronthand{
-	background-color: #FFE1BD;
-}
-
-.disappear{
-	opacity: 0;
-}
-
-.homeDiv{
-	width: 75vw;
-}
-
-.logo1Text{
-	color: #7F5639;
-	text-align: center;
-	padding-bottom: 0;
-	margin: 0;
-}
-
-.logo2Text{
-	color: #C69C6D;
-	text-align: center;
-	padding-top: 0;
-	margin: 0;
-}
-
