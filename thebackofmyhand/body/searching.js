@@ -15,7 +15,7 @@ function isInViewport(el) {
     );
 }
 
-
+/*
 const test = document.querySelector('.test');
 
 document.addEventListener('scroll', function () {
@@ -23,3 +23,8 @@ document.addEventListener('scroll', function () {
     passive: true
 });
 */
+
+window.onload = function(){
+    appear = document.getElementById("bkg");
+    setTimeout(function(){ appear.classList.remove('disappear'); }, 500);
+}

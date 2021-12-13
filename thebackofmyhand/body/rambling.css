@@ -27,44 +27,59 @@ body{
 	height: 100vh;
 }
 
-#main{
-	color: #7F5639;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	width: 100vw;
+#paragraph{
+	transition: opacity 2s, background-color 2s;
 }
 
 p{
 	font-size: 1.5vw;
 	color: #7F5639;
+	margin: 5em;
+	padding-bottom: 5em;
+}
+
+button{
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 2vw;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.disappear{
+	opacity: 0;
+}
+
+.para{
+	transition: letter-spacing 1s;
 	column-count: 2;
-	margin: 1em;
+	column-gap: 2em;
+}
+
+.para:hover{
+	letter-spacing: 2em;
+}
+
+.changeBkg{
+	background-color: #6D4027;
 }
 
 .poem{
-	opacity: 0;
+	color: #5B3421;
+	opacity: 100;
 	position: absolute;
 	top: 0;
 	left: 0;
-}
-
-.poem:hover{
-	opacity: 100;
-	color: black;
-}
-
-section{
-	width: 50;
+	z-index: -99;
 }
 
 .cursor{
 	background-color: #7F5639;
 	position: absolute;
 	transform: translate(-50%, -50%);
-	height: 10em;
-	width: 10em;
+	height: 30em;
+	width: 30em;
 	display: block;
 	border-radius: 50%;
 	z-index: -100;

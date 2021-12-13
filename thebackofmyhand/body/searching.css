@@ -21,19 +21,14 @@
 }
 
 body{
+	/*animation: fullRotate 60s infinite;*/
 	background-color: #6D4027;
 	width: 500vw;
 	height: 500vh;
 }
 
-
-#main{
-	color: #7F5639;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	width: 100vw;
+#bkg{
+	transition: opacity 2s;
 }
 
 .disappear{
@@ -342,8 +337,10 @@ p:nth-of-type(19):hover{
 }
 
 
-
-
+@keyframes fullRotate{
+	0%{transform: rotate(360deg);}
+	100%{transform: rotate(0deg);}
+}
 
 
 
