@@ -1,5 +1,9 @@
 let main = document.getElementById('main');
 
+window.onload = function(){
+	start();
+}
+
 function start(){
 	let start = document.getElementById('div1');
 	start.classList.add('disappear');

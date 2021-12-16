@@ -4,25 +4,21 @@ function goHome(){
 	setTimeout(function(){window.open("../body/home.html","_self"); }, 4000);
 }
 
-function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-
-    );
+function allDone(){
+    let sDone = window.localStorage.getItem('searching');
+    let rDone = window.localStorage.getItem('rambling');
+    let cDone = window.localStorage.getItem('conversing');
+    
+    if(sDone=="1" && rDone=="1" && cDone=="1"){
+        let poof = document.getElementById('bkg');
+        poof.classList.add('disappear');
+        poof.classList.add('changeBkgEND');
+        setTimeout(function(){window.open("../end/finding.html","_self"); }, 4000);
+    } else{
+        goHome();
+    }
 }
 
-/*
-const test = document.querySelector('.test');
-
-document.addEventListener('scroll', function () {
-    const messageText = isInViewport(test) ?}, {
-    passive: true
-});
-*/
 
 window.onload = function(){
     appear = document.getElementById("bkg");

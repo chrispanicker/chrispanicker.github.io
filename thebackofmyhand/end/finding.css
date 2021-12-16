@@ -23,10 +23,14 @@
 
 body{
   transition: background-color 2s;
-  background-color: #FFE1BD;
-  width: 360vw;
+  width: 450vw;
   height: 100vh;
 }
+
+#bkg{
+  background-color: rgb(255, 225, 189);
+}
+
 
 h2{
   padding: 1em;
@@ -38,16 +42,12 @@ p{
 }
 
 button{
-  transition: opacity 1s;
   margin: 0;
   padding: 0;
   border: none;
   font-size: 2em;
   background-color: transparent;
-}
 
-button:hover{
-  opacity: 50%;
 }
 
 section{
@@ -70,6 +70,5 @@ div{
 }
 
 .bkgChange{
-  background-color: #6D4027;
+  background-color: #4F321F;
 }
-

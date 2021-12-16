@@ -21,7 +21,7 @@
 }
 
 body{
-	transition: background-color 2s;
+	transition: background-color 2s, opacity 2s;
 	background-color: #6D4027;
 	width: 270vw;
 	height: 100vh;
@@ -50,12 +50,25 @@ div{
 }
 
 button{
+	transition: opacity 1s;
   margin: 0;
   padding: 0;
   border: none;
   font-size: 4em;
   background-color: transparent;
   text-decoration: underline;
+}
+
+.back{
+	transition: opacity 1s;
+	color: #4F321F;
+	position: fixed;
+	padding: 1vw;
+	text-decoration: none;
+}
+
+button:hover{
+	opacity: 75%;
 }
 
 .disappear{
@@ -80,6 +93,10 @@ button{
 
 .bkgChange3{
 	background-color: #4F321F;
+}
+
+.changeBkg{
+	background-color: #FFE1BD;
 }
 
 div button{
@@ -112,16 +129,5 @@ div button{
 	transition: opacity .3s;
 }
 
-#div1 button:hover{
-	opacity: 75%;
-}
-
-#div2 button:hover{
-	opacity: 75%;
-}
-
-#div3 button:hover{
-	opacity: 75%;
-}
 
 

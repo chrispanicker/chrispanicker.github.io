@@ -1,6 +1,7 @@
 window.onload = function(){
 	divMove = document.getElementById("main");
 	setTimeout(function(){ divMove.classList.remove('offScreen'); }, 1000);
+	window.localStorage.clear();
 }
 
 function goHome(){

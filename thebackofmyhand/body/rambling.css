@@ -39,12 +39,22 @@ p{
 }
 
 button{
+	color: #7F5639;
   margin: 0;
   padding: 0;
   border: none;
   font-size: 2vw;
   background-color: transparent;
-  text-decoration: underline;
+}
+
+.back{
+	transition: color 1s;
+	position: fixed;
+	font-size: 4em;
+}
+
+.back:hover{
+	color: #5B3421;
 }
 
 .disappear{
@@ -63,6 +73,10 @@ button{
 
 .changeBkg{
 	background-color: #6D4027;
+}
+
+.changeBkgEND{
+	background-color: #FFE1BD;
 }
 
 .poem{
