@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+
+*{
+	font-size: 3vh;
+	font-family: 'Zen Antique Soft', serif;
+}
+
+body{
+	background-color: #7C3E20;
+}
+
+button{
+	background-color: #A67B60;
+	color:  #7C3E20;
+	text-decoration: underline;
+	margin: 0;
+	padding-left: 1vw;
+	padding-right: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	border: none;
+}
+
+h1{
+	color:  #67331A;
+	width: 100vw;
+	display: inline-block;
+	text-align: center;
+}
+
+p{
+	margin: 0;
+}
+
+#chatBox{
+	height: 5vh;
+	width: 100vw;
+	background-color: #A67B60;
+	color:  #7C3E20;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	}
+
+#responses{
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: #A67B60;
+}
+
+.you{
+	text-align: right;
+	padding-right: 2vw;
+}
+
+.unknown{
+	color: #67331A;
+	text-align: left;
+	padding-left: 2vw;
+}

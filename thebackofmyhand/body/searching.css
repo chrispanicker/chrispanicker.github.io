@@ -1,0 +1,371 @@
+@font-face {font-family: "Tarsus W03 Light";
+  src: url("../assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.eot"); /* IE9*/
+  src: url("../assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.woff2") format("woff2"), /* chrome、firefox */
+  url("../assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.woff") format("woff"), /* chrome、firefox */
+  url("../assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.svg#Tarsus W03 Light") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {font-family: "Tarsus W03 Medium";
+  src: url("../assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.eot"); /* IE9*/
+  src: url("../assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.woff2") format("woff2"), /* chrome、firefox */
+  url("../assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.woff") format("woff"), /* chrome、firefox */
+  url("../assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.svg#Tarsus W03 Medium") format("svg"); /* iOS 4.1- */
+}
+
+*{
+	font-family: "Tarsus W03 Light";
+}
+
+body{
+	/*animation: fullRotate 60s infinite;*/
+	transition: opacity 2s, background-color 2s;
+	background-color: #6D4027;
+	width: 400vw;
+	height: 800vh;
+}
+
+#bkg{
+	transition: opacity 2s, background-color 2s;
+}
+
+.changeBkgEND{
+	background-color: #FFE1BD;
+}
+
+.disappear{
+	opacity: 0;
+}
+
+.end{
+
+}
+
+
+.back{
+	font-size: 4em;
+	transition: opacity 1s;
+	color: #4F321F;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 1vw;
+	text-decoration: none;
+}
+
+button:hover{
+	opacity: 75%;
+}
+
+p{
+	transition: transform 1s;
+	display: inline-block;
+	position: relative;
+	font-size: 2.5em;
+	color: #4F321F;
+	padding: 0;
+	margin: 0;
+}
+
+button{
+	position: relative;
+	left: -110em;
+	top: 88em;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 2.5em;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+p:nth-of-type(1){
+
+transition: transform 1s;	
+	left: 10em;
+	top: 5em;
+}
+
+p:nth-of-type(2){
+
+transition: transform 1s;	
+	left: 20em;
+	top: 6em;
+	transform: rotate(9deg);
+}
+
+p:nth-of-type(3){
+
+transition: transform 1s;	transform: rotate(26deg);
+	left: 35em;
+	top: 13em;
+}
+
+p:nth-of-type(4){
+
+transition: transform 1s;	transform: rotate(36deg);
+	left: 47em;
+	top: 25em;
+}
+
+p:nth-of-type(5){
+
+transition: transform 1s;	transform: rotate(67deg);
+	left: 55em;
+	top: 45em;
+}
+
+p:nth-of-type(6){
+
+transition: transform 1s;	transform: rotate(90deg);
+	left: 50em;
+	top: 75em;
+}
+
+p:nth-of-type(7){
+
+transition: transform 1s;	transform: rotate(109deg);
+	left: 40em;
+	top: 95em;
+}
+
+p:nth-of-type(8){
+
+transition: transform 1s;	transform: rotate(129deg);
+	left: 25em;
+	top: 115em;
+}
+
+
+p:nth-of-type(9){
+transition: transform 1s;	transform: rotate(149deg);
+	left: -2em;
+	top: 130em;
+}
+
+p:nth-of-type(10){
+	transition: transform 1s;
+	transform: rotate(165deg);
+	left: -45em;
+	top: 142em;
+}
+
+p:nth-of-type(11){
+	transition: transform 1s;
+	/*Was I Lying?*/
+	transform: rotate(180deg);
+	animation: shake1 .1s infinite;
+	left: -85em;
+	top: 146em;
+}
+
+p:nth-of-type(12){
+	transition: transform 1s;
+	transform: rotate(209deg);
+	animation: shake2 .1s infinite;
+	left: -100em;
+	top: 142em;
+}
+
+
+p:nth-of-type(13){
+	transition: transform 1s;
+	animation: shake3 .05s infinite;
+	transform: rotate(229deg);
+	left: -110em;
+	top: 134em;
+}
+
+p:nth-of-type(14){
+	transition: transform 1s;
+	animation: shake4 .05s infinite;
+	transform: rotate(249deg);
+	left: -123em;
+	top: 125em;
+}
+
+p:nth-of-type(15){
+	transition: transform 1s;
+	animation: shake5 .05s infinite;
+	transform: rotate(270deg);
+	left: -130em;
+	top: 115em;
+}
+
+p:nth-of-type(16){
+	transition: transform 1s;
+	animation: shake6 .05s infinite;
+	transform: rotate(299deg);
+	left: -130em;
+	top: 105em;
+}
+
+p:nth-of-type(17){
+	transition: transform 1s;
+	animation: shake7 .05s infinite;
+	transform: rotate(329deg);
+	left: -125em;
+	top: 97em;
+}
+
+
+p:nth-of-type(18){
+	transition: transform 1s;
+	animation: shake8 .05s infinite;
+	transform: rotate(349deg);
+	left: -120em;
+	top: 90em;
+}
+
+.disappear{
+	opacity: 0;
+}
+
+button{
+	display: inline-block;
+	font-size: 2.5em;
+	color: #4F321F;
+	padding: 0;
+	margin: 0;
+}
+
+p:nth-of-type(1):hover{
+	transform: rotate(0);
+}
+
+p:nth-of-type(2):hover{
+	transform: rotate(0);
+}
+
+p:nth-of-type(3):hover{
+	transform: rotate(0);
+}
+
+p:nth-of-type(4):hover{
+	transform: rotate(0);
+}
+
+p:nth-of-type(5):hover{
+	transform: rotate(0);
+}
+
+p:nth-of-type(6):hover{
+	transform: rotate(0);
+}
+
+p:nth-of-type(7):hover{
+	transform: rotate(0);
+}
+
+p:nth-of-type(8):hover{
+	transform: rotate(0);
+}
+
+
+p:nth-of-type(9):hover{
+	transform: rotate(0);
+}
+
+p:nth-of-type(10):hover{
+	transform: rotate(0);
+}
+
+p:nth-of-type(11):hover{
+	transform: rotate(0);
+}
+
+p:nth-of-type(12):hover{
+	transform: rotate(0);
+}
+
+
+p:nth-of-type(13):hover{
+	transform: rotate(0);
+}
+
+p:nth-of-type(14):hover{
+	transform: rotate(0);
+}
+
+p:nth-of-type(15):hover{
+	transform: rotate(0);
+}
+
+p:nth-of-type(16):hover{
+	transform: rotate(0);
+}
+
+p:nth-of-type(17):hover{
+transform: rotate(0);
+}
+
+
+p:nth-of-type(18):hover{
+	transform: rotate(0);
+}
+
+
+
+p:nth-of-type(19):hover{
+	transform: rotate(0);
+}
+
+@keyframes shake1{
+	0%{left: -80em;}
+	50%{left: -80.02em;}
+	100%{left: -80em;}
+}
+
+@keyframes shake2{
+	0%{left: -100.09em;}
+	50%{left: -100em;}
+	100%{left: -100.09em;}
+}
+
+@keyframes shake3{
+	0%{left: -113em;}
+	50%{left: -113.2em;}
+	100%{left: -113em;}
+}
+
+@keyframes shake4{
+	0%{left: -123em;}
+	50%{left: -123.5em;}
+	100%{left: -123em;}
+}
+
+@keyframes shake5{
+	0%{left: -130em;}
+	50%{left: -130.8em;}
+	100%{left: -130em;}
+}
+
+@keyframes shake6{
+	0%{left: -131em;}
+	50%{left: -132em;}
+	100%{left: -131em;}
+}
+
+@keyframes shake7{
+	0%{left: -125em;}
+	50%{left: -128em;}
+	100%{left: -125em;}
+}
+
+@keyframes shake8{
+	0%{left: -118em;}
+	50%{left: -124em;}
+	100%{left: -118em;}
+}
+
+
+@keyframes fullRotate{
+	0%{transform: rotate(360deg);}
+	100%{transform: rotate(0deg);}
+}
+
+
+

@@ -1,0 +1,100 @@
+
+@font-face {font-family: "Tarsus W03 Light";
+  src: url("../assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.eot"); /* IE9*/
+  src: url("../assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.woff2") format("woff2"), /* chrome、firefox */
+  url("../assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.woff") format("woff"), /* chrome、firefox */
+  url("../assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.svg#Tarsus W03 Light") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {font-family: "Tarsus W03 Medium";
+  src: url("../assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.eot"); /* IE9*/
+  src: url("../assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("../assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.woff2") format("woff2"), /* chrome、firefox */
+  url("../assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.woff") format("woff"), /* chrome、firefox */
+  url("../assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("../assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.svg#Tarsus W03 Medium") format("svg"); /* iOS 4.1- */
+}
+
+*{
+	font-family: "Tarsus W03 Light";
+}
+
+body{
+	background-color: #5B3421;
+	width: 100vw;
+	height: 100vh;
+}
+
+#paragraph{
+	transition: opacity 2s, background-color 2s;
+}
+
+p{
+	font-size: 1.5vw;
+	color: #7F5639;
+	margin: 5em;
+	padding-bottom: 5em;
+}
+
+button{
+	color: #7F5639;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 2vw;
+  background-color: transparent;
+}
+
+.back{
+	transition: color 1s;
+	position: fixed;
+	font-size: 4em;
+}
+
+.back:hover{
+	color: #5B3421;
+}
+
+.disappear{
+	opacity: 0;
+}
+
+.para{
+	transition: letter-spacing 1s;
+	column-count: 2;
+	column-gap: 2em;
+}
+
+.para:hover{
+	letter-spacing: 2em;
+}
+
+.changeBkg{
+	background-color: #6D4027;
+}
+
+.changeBkgEND{
+	background-color: #FFE1BD;
+}
+
+.poem{
+	color: #5B3421;
+	opacity: 100;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -99;
+}
+
+.cursor{
+	background-color: #7F5639;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	height: 30em;
+	width: 30em;
+	display: block;
+	border-radius: 50%;
+	z-index: -100;
+}

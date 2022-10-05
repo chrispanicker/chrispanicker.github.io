@@ -1,0 +1,86 @@
+
+@font-face {font-family: "Tarsus W03 Light";
+  src: url("./assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.eot"); /* IE9*/
+  src: url("./assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("./assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.woff2") format("woff2"), /* chrome、firefox */
+  url("./assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.woff") format("woff"), /* chrome、firefox */
+  url("./assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("./assets/Tarsus_Light/@font-face/ce86d9d8359d9d332a1d3a3142a51eeb.svg#Tarsus W03 Light") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {font-family: "Tarsus W03 Medium";
+  src: url("./assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.eot"); /* IE9*/
+  src: url("./assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("./assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.woff2") format("woff2"), /* chrome、firefox */
+  url("./assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.woff") format("woff"), /* chrome、firefox */
+  url("./assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("./assets/Tarsus_Medium/@font-face/56f9cf3619be3359ef718b6fe6417249.svg#Tarsus W03 Medium") format("svg"); /* iOS 4.1- */
+}
+
+*{
+	font-family: "Tarsus W03 Light";
+}
+
+body{
+	background-color: #4F321F;
+	transition: background-color 2s;
+	width: 100vw;
+	height: 100vh;
+}
+
+#main{
+	color: #7F5639;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+}
+
+p{
+	font-size: 2em;
+}
+
+h2{
+	font-size: 4em;
+}
+
+button{
+	color: #7F5639;
+	border: none;
+	font-size: 2em;
+	background-color: transparent;
+	text-decoration: underline;
+}
+
+div{
+	opacity: 100;
+	transition: opacity 2s;
+}
+
+.fronthand{
+	background-color: #FFE1BD;
+}
+
+.disappear{
+	opacity: 0;
+}
+
+.homeDiv{
+	width: 75vw;
+}
+
+.logo1Text{
+	color: #7F5639;
+	text-align: center;
+	padding-bottom: 0;
+	margin: 0;
+}
+
+.logo2Text{
+	color: #C69C6D;
+	text-align: center;
+	padding-top: 0;
+	margin: 0;
+}
+
